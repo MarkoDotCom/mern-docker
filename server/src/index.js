@@ -1,12 +1,17 @@
 // server.js
 import bodyParser from 'body-parser';
 import express from 'express';
-import router from '././routes';
-import postRouter from '././routes/post.routes';
-import './config/mongodb.config';
+// import './config/mongodb.config';
+// import postRouter from './routes/post.router';
 
 const app = express();
 const PORT = 8080;
+
+// Our DB Configuration
+//require('./src/database');
+
+// Routes
+//const postRouter = require('./routes/post.router.js');
 
 app.use(
   bodyParser.urlencoded({
@@ -15,12 +20,17 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.use('/api', router);
-app.use('/api/posts', postRouter);
 
-app.get('/', function(req, res){
-  res.send('Hello ! from the Server ');
-});
+// Server API's
+// app.use('/api/posts', postRouter);
+
+app.get('/', (req, res) => {
+  res.status(200).send('API Gateway in development');
+})
+
+app.get('/abc', function(req, res){
+  res.send('Hello world again');
+})
 
 app.listen(PORT, function () {
     console.log(`Server Listening on ${PORT}`);
