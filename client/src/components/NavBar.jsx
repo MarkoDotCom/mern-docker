@@ -14,10 +14,10 @@ const NavBar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="#">Quienes Somos</MenuLink>
-        <MenuLink href="#">About</MenuLink>
-        <MenuLink href="#">Carreras</MenuLink>
-        <MenuLink href="#">Contacto</MenuLink>
+        <MenuLink href="/productos">Productos</MenuLink>
+        <MenuLink href="/">About</MenuLink>
+        <MenuLink href="/">Carreras</MenuLink>
+        <MenuLink href="/">Contacto</MenuLink>
       </Menu>
     </Nav>
   )
@@ -70,7 +70,6 @@ position: relative;
   width: 100%;
   max-height: ${({isOpen}) => (isOpen ? "300px" : "0px")};
   transition: max-height 0.3s ease-in;
-
 }
 `
 

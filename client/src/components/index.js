@@ -3,5 +3,6 @@
 
 import Links from './Links'
 import NavBar from './NavBar'
+import Box from './Box'
 
-export { Links, NavBar }
+export { Links, NavBar, Box }
