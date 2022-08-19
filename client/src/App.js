@@ -2,12 +2,13 @@ import './App.css';
 import styled from 'styled-components';
 import { NavBar } from './components'
 import {
-  BrowserRouter as Router,
-  Switch,
+  Router,
   Route,
   Link
 } from "react-router-dom";
-import { Home } from './pages'
+import { Banner } from "./components";
+
+import { Home, Products } from './pages'
 
 const Container = styled.div`
 background: gray;
@@ -19,11 +20,14 @@ function App() {
     <>
       <Container>
         <NavBar />
-        <Switch>
+        {/* <Banner /> */}
           <Route exact path="/">
             <Home />
           </Route>
-        </Switch>
+          <Route exact path="/products">
+            <Products />
+          </Route>
+       <Link to="/">Back Home</Link> 
       </Container>
 
 

@@ -1,12 +1,11 @@
-import React from 'react'
-import { Box } from '../components'
+import React from "react";
+import { Banner } from "../components";
 const Home = () => {
   return (
-	<div>
-		<h2>Home</h2>
-		<Box></Box>
-	</div>
-  )
-}
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
