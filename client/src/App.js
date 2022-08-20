@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import { NavBar } from './components'
+import { NavBar, Box } from './components'
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +21,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
+            <Box/>
             <Home />
           </Route>
         </Switch>
@@ -30,8 +31,6 @@ function App() {
     </>
   );
 }
-
-
 
 function About() {
   return (
