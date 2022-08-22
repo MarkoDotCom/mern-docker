@@ -4,5 +4,6 @@
 import Links from './Links'
 import NavBar from './NavBar'
 import Box from './Box'
+import Box_00 from './Box_00'
 
-export { Links, NavBar, Box }
+export { Links, NavBar, Box, Box_00 }
