@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import { NavBar, Box } from './components'
+import { NavBar, Box, Box_00 } from './components'
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,15 +17,16 @@ height: 100vh;
 function App() {
   return (
     <>
-      <Container>
+    
         <NavBar />
         <Switch>
           <Route exact path="/">
             <Box/>
+            <Box_00/>
             <Home />
           </Route>
         </Switch>
-      </Container>
+      
 
 
     </>
