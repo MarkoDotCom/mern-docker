@@ -5,9 +5,9 @@ import Container from "@mui/material/Container";
 import { experimentalStyled as styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 // import Typography from '@mui/material/Typography';
-import Typography from '@mui/joy/Typography';
-import List from '@mui/joy/List';
-import ListItem from '@mui/joy/ListItem';
+import Typography from "@mui/joy/Typography";
+import List from "@mui/joy/List";
+import ListItem from "@mui/joy/ListItem";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,24 +19,27 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Box_00 = () => {
   return (
-  <Container sx={{ height: 200, backgroundColor: "#FFFFFF",         display: "flex",
-    flexWrap: "wrap",
-    alignContent: "center",
-    justifyContent: "center",
-    fontFamily: "Shrikhand",
-    border: "1px solid"
-  }}>
-      <Grid container>
-        <Grid item xs={6} sx={{
+    <Container
+      sx={{
+        height: 200,
+        display: "flex",
+        flexWrap: "wrap",
+        alignContent: "center",
+        justifyContent: "center",
         fontFamily: "Shrikhand",
-        border: "1px solid"
+        border: "1px solid",
+      }}
+    >
+      <Grid container>
+        <Grid
+          item
+          xs={6}
+          sx={{
+            fontFamily: "Shrikhand",
+            border: "1px solid",
+          }}
+        >
 
-        }}>
-          <Box
-            sx={{ fontFamily: "Rubik" }}
-          >
-            Nombre: <Typography variant="h6" sx={{fontWeight: "bold"}}>Marco González</Typography>
-          </Box>
         </Grid>
 
         {/* ... */}

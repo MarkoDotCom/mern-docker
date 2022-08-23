@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import { NavBar, Box, Box_00 } from './components'
+import { NavBar, Box, Box_00, GridCard } from './components'
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Box/>
+            <GridCard/>
             <Box_00/>
             <Home />
           </Route>
