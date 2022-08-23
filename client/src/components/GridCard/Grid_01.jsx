@@ -1,23 +1,42 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import Card from './Card_01';
-import Typography from '@mui/joy/Typography';
+import Card from "./Card_01";
 
 const Grid_01 = () => {
   return (
     <Grid
+      container
       sx={{
         border: 1,
         height: 200,
         display: "flex",
         flexWrap: "wrap",
+        alignContent: 'flex-start',
         alignContent: "center",
-        justifyContent: "center",
+        // justifyContent: "center",
       }}
     >
-      <Typography sx={{ border: 1 }}>Grid_01 Component</Typography>
-      
-      <Card />
+      <Grid item xs={6} sx={{flexDirection: 'row',}}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
+      <Grid item xs={6}>
+        <Card />
+      </Grid>
     </Grid>
   );
 };
