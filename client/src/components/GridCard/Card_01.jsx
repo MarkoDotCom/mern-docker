@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
-// import Typography from "@mui/material/Typography";
 import Typography from "./Typography_01";
 
-const Card_01 = (props) => {
-  const { sx, ...other } = props;
+const Card_01 = ({ parrafo }) => {
   return (
-    <Box
-      sx={{
-        fontFamily: "Rubik",
-        border: 1,
-      }}
-    >
-      <Typography />
-    </Box>
+    <>
+      <Box
+        sx={{
+          border: 1,
+          m: 1,
+          p: 1,
+        }}
+      >
+        <Typography parrafo={parrafo} />
+      </Box>
+    </>
   );
 };
 

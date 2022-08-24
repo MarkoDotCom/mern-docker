@@ -5,7 +5,7 @@ export default function BoxSx() {
   return (
     <Box
       sx={{
-        fontSize: 42,
+        fontSize: 64,
         fontFamily: "Shrikhand",
         color: "#ffffff",
         display: "flex",
@@ -13,7 +13,7 @@ export default function BoxSx() {
         alignContent: "center",
         justifyContent: "center",
         height: 200,
-        letterSpacing: 10,
+        letterSpacing: 14,
         background:
           "linear-gradient(315deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
         backgroundColor: "primary.dark",
