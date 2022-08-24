@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "./Typography_01";
+import Divider from "@mui/material/Divider";
 
-const Card_01 = ({ parrafo }) => {
+
+const Card_01 = ({ parrafo, index }) => {
   return (
     <>
       <Box
@@ -13,7 +15,21 @@ const Card_01 = ({ parrafo }) => {
         }}
       >
         <Typography parrafo={parrafo} />
+        
+        {/* {index % 2 == 0 ? (
+              <Divider
+                orientation="vertical"
+                flexItem
+                sx={{
+                  variant: "inset",
+                  absolute: true
+                }}
+              />
+            ) : (
+              <></>
+            )} */}
       </Box>
+
     </>
   );
 };

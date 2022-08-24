@@ -6,5 +6,6 @@ import NavBar from './NavBar'
 import Box from './Box'
 import Box_00 from './Box_00'
 import GridCard from './GridCard/Grid_01'
+import Banner_01 from './Banner_01/Grid_01'
 
-export { Links, NavBar, Box, Box_00, GridCard }
+export { Links, NavBar, Box, Box_00, GridCard, Banner_01 }
