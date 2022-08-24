@@ -10,9 +10,12 @@ const Typography_01 = ({ parrafo }) => {
           letterSpacing: 0,
           fontFamily: "Baloo 2",
           display: "flex",
-          color: "#c5624a",
+          // color: "#c5624a",
           // justifyContent: "center",
           pl: "10%",
+          background: "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent"
         }}
       >
         {parrafo.tag}:
@@ -26,10 +29,13 @@ const Typography_01 = ({ parrafo }) => {
           letterSpacing: 1,
           fontFamily: "Baloo 2",
           display: "flex",
-          color: "#bd472a",
+          // color: "#bd472a",
           fontWeight: "bold",
           // justifyContent: "left",
-          pl:"15%"
+          pl:"15%",
+          background: "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent"
           // ml:"20%"
         }}
       >

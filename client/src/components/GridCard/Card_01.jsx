@@ -7,7 +7,7 @@ const Card_01 = ({ parrafo }) => {
     <>
       <Box
         sx={{
-          border: 1,
+          // border: 1,
           m: 1,
           p: 1,
         }}
