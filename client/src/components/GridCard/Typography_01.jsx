@@ -12,7 +12,7 @@ const Typography_01 = ({ parrafo }) => {
           display: "flex",
           // color: "#c5624a",
           // justifyContent: "center",
-          pl: "10%",
+          pl: "5%",
           background: "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent"
@@ -32,7 +32,7 @@ const Typography_01 = ({ parrafo }) => {
           // color: "#bd472a",
           fontWeight: "bold",
           // justifyContent: "left",
-          pl:"15%",
+          pl:"10%",
           background: "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent"

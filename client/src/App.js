@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import { NavBar, Box, Box_00, GridCard } from './components'
+import { NavBar, Box, Box_00, GridCard, Banner_01} from './components'
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import { Home } from './pages'
+import { DiamondTwoToneIcon } from "./components/Icons"
 
 const Container = styled.div`
 background: gray;
@@ -18,11 +19,13 @@ function App() {
   return (
     <>
     
-        <NavBar />
+        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/">
-            <Box/>
+            <Box text="Bienvenidos" icon="test"/>
             <GridCard/>
+            <Banner_01 />
+            {/* <Box text="Carta de Presentación"/> */}
             {/* <Box_00/> */}
             {/* <Home /> */}
           </Route>

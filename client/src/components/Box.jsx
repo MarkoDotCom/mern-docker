@@ -1,13 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import DiamondTwoToneIcon from '@mui/icons-material/DiamondTwoTone';
+// import DiamondTwoToneIcon from "@mui/icons-material/DiamondTwoTone";
+import {DiamondTwoToneIcon} from "./Icons"
 
-export default function BoxSx() {
+export default function BoxSx({ text, icon }) {
   return (
     <Box
       sx={{
         fontSize: 64,
-        fontFamily: "Salsa  ",
+        fontFamily: "Salsa",
         color: "#ffffff",
         display: "flex",
         flexWrap: "wrap",
@@ -25,8 +26,10 @@ export default function BoxSx() {
           opacity: [0.9, 0.8, 0.7],
         },
       }}
-    ><DiamondTwoToneIcon sx={{fontSize: "large"}}/>
-      Bienvenidos
+    >
+      <DiamondTwoToneIcon></DiamondTwoToneIcon>
+      {icon}
+      {text}
     </Box>
   );
 }
