@@ -23,8 +23,8 @@ function App() {
           <Route exact path="/">
             <Box/>
             <GridCard/>
-            <Box_00/>
-            <Home />
+            {/* <Box_00/> */}
+            {/* <Home /> */}
           </Route>
         </Switch>
       
