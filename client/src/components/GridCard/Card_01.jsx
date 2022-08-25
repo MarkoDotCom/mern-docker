@@ -4,7 +4,7 @@ import Typography from "./Typography_01";
 import Divider from "@mui/material/Divider";
 
 
-const Card_01 = ({ parrafo, index }) => {
+const Card_01 = ({ parrafo }) => {
   return (
     <>
       <Box
@@ -15,21 +15,7 @@ const Card_01 = ({ parrafo, index }) => {
         }}
       >
         <Typography parrafo={parrafo} />
-        
-        {/* {index % 2 == 0 ? (
-              <Divider
-                orientation="vertical"
-                flexItem
-                sx={{
-                  variant: "inset",
-                  absolute: true
-                }}
-              />
-            ) : (
-              <></>
-            )} */}
       </Box>
-
     </>
   );
 };
