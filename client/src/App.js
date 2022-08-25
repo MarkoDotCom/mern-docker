@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/">
             <Box text="Bienvenidos" icon="test"/>
             <GridCard/>
-            <Banner_01 />
+            <Banner_01 titulo="titulo de prueba" icon="person" />
             {/* <Box text="Carta de Presentación"/> */}
             {/* <Box_00/> */}
             {/* <Home /> */}
