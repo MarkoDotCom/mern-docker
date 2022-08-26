@@ -9,6 +9,7 @@ const Typography_01 = ({ parrafo }) => {
           // border: 1,
           letterSpacing: 0,
           fontFamily: "Baloo 2",
+          fontSize: 14,
           display: "flex",
           // color: "#c5624a",
           // justifyContent: "center",
