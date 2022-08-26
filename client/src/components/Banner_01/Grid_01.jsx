@@ -9,14 +9,14 @@ import Typography from "./Typography_01"
 import Box from "@mui/material/Box";
 
 
-const Grid_01 = ({titulo, icon}) => {
+const Grid_01 = ({titulo, icon, height}) => {
 	// const [parrafo, setParrafo] = useState("Colaborador interesado en mejorar sus habilidades tecnológicas en el desarrollo de software computacional. Ofrezco utilidad en áreas de interes como son el desarrollo de aplicaciones, redes, electrónica, robótica, ecología y botánica. Mantengo mis mejores expectativas para ser una gran contribución y también con quienes me inviten a ser parte de sus proyectos.")
 
   return (
     <Box
       sx={
         {
-          border: 1,
+          // border: 1,
           background:
           "linear-gradient(315deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
         }
@@ -31,10 +31,12 @@ const Grid_01 = ({titulo, icon}) => {
           // flexWrap: "wrap",
 		      justifyContent: "center",
           alignItems:"center",
-          my: 1,
+          // my: 1,
+          height: parseInt(height)
           // p: 1,
         }}
       >
+        {/* {typeof height} */}
         <Grid
           item
         //   xs={6}

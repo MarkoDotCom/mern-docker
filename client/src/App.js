@@ -8,22 +8,15 @@ import {
   Link
 } from "react-router-dom";
 import { Home } from './pages'
-import { DiamondTwoToneIcon } from "./components/Icons"
-
-const Container = styled.div`
-background: gray;
-height: 100vh;
-`
 
 function App() {
   return (
     <>
         <Switch>
           <Route exact path="/">
-            <Box text="Bienvenidos" icon="test"/>
+            <Banner_01 titulo="Bienvenidos" icon="diamond" height="200"/>
             <GridCard/>
             <Banner_01 titulo="Carta de presentación" icon="person" height="120"/>
-            <Banner_01 titulo="Bienvenidos" icon="diamond" height="200"/>
           </Route>
         </Switch>
     </>
