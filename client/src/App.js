@@ -18,38 +18,15 @@ height: 100vh;
 function App() {
   return (
     <>
-    
-        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/">
             <Box text="Bienvenidos" icon="test"/>
             <GridCard/>
-            <Banner_01 titulo="titulo de prueba" icon="person" />
-            {/* <Box text="Carta de Presentación"/> */}
-            {/* <Box_00/> */}
-            {/* <Home /> */}
+            <Banner_01 titulo="Carta de presentación" icon="person" height="120"/>
+            <Banner_01 titulo="Bienvenidos" icon="diamond" height="200"/>
           </Route>
         </Switch>
-      
-
-
     </>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }
 
