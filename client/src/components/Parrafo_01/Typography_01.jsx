@@ -14,11 +14,8 @@ const Typography_01 = ({ parrafo }) => {
         // justifyContent: "left",
         // pl: "10%",
         fontSize:18,
-        my: 2,
-        background:
-          "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
+            color: "#505050",
+            my: 2,
         // ml:"20%"
       }}
     >

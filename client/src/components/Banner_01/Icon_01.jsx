@@ -2,7 +2,8 @@ import React from "react";
 import PersonOutlineTwoToneIcon from "@mui/icons-material/PersonOutlineTwoTone";
 import DiamondTwoToneIcon from "@mui/icons-material/DiamondTwoTone";
 import HomeWorkTwoToneIcon from "@mui/icons-material/HomeWorkTwoTone";
-import Diversity3TwoToneIcon from '@mui/icons-material/Diversity3TwoTone';
+import Diversity3TwoToneIcon from "@mui/icons-material/Diversity3TwoTone";
+import SchoolTwoToneIcon from "@mui/icons-material/SchoolTwoTone";
 
 const Icon_01 = ({ icon }) => {
   switch (icon) {
@@ -24,9 +25,18 @@ const Icon_01 = ({ icon }) => {
           }}
         />
       );
-      case "HomeWork":
+    case "homework":
+      return (
+        <Diversity3TwoToneIcon
+          sx={{
+            color: "#ffffff",
+            fontSize: 50,
+          }}
+        />
+      );
+      case "academy":
         return (
-          <Diversity3TwoToneIcon
+          <SchoolTwoToneIcon
             sx={{
               color: "#ffffff",
               fontSize: 50,

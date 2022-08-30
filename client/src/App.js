@@ -18,8 +18,9 @@ function App() {
             <GridCard/>
             <Banner_01 titulo="Carta de Presentación" icon="person" height="100"/>
             <Parrafo_01/>
-            <Banner_01 titulo="Experiencia Laboral" icon="HomeWork" height="100"/>
+            <Banner_01 titulo="Experiencia Laboral" icon="homework" height="100"/>
             <GridExperiencias_01></GridExperiencias_01>
+            <Banner_01 titulo="Experiencia Academica" icon="academy" height="100"/>
           </Route>
         </Switch>
     </>
