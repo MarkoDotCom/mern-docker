@@ -13,67 +13,28 @@ import Divider from "@mui/material/Divider";
 const Wrapper_01 = () => {
   const [experiencias, setExperiencias] = useState([
     {
-      role: "Analista de Integraciones",
-      periodoInicio: "10/2020",
-      periodoFin: "03/2022",
-      company: "Buk",
-      funciones: [
-        "· Manejo y desarrollo de información contable para empresas.",
-        "· Garantizar soluciones a preguntas planteadas por otros equipos de trabajo.",
-      ],
-      stack: [
-        "Ruby on Rails",
-        "Gitlab",
-        "PostgreSQL",
-        "Slack",
-        "Gather",
-        "Freshdesk",
-        "Sentry",
-        "Trello",
-        "Jira",
-        "Google",
-        "Workspace",
-        "Linux Ubuntu",
-        "Windows",
-        "Linq",
-        "Microsoft SQL Server",
-        "Microsoft Office",
-      ],
+      clase: "Titulo Profesional",
+      casa: "DuocUC",
+      titulo: "Analista Computacional",
+      descripcion:
+        "Conocimiento técnico en lenguajes de programación, algoritmos complejos, enfoque lógico y metodologías para el apropiado desarrollo de proyectos, junto con habilidades en escritura para formular documentación y reportes.",
+      periodo: "2019",
     },
     {
-      role: "Soporte Informático & Técnico",
-      periodoInicio: "01/2019",
-      periodoFin: "10/2019",
-      company: "SIAC Solutions",
-      funciones: [
-        "· Elaboración de dispositivos electrónicos.",
-        "· Instalación, mantenimiento y monitoreo de equipos de control centralizado.",
-      ],
-      stack: [
-        "Schneider Electric EcoStruxure Software",
-        "AutoCAD",
-        "JavaScript",
-        "Google Workspace",
-        "Arduino",
-        "IDE",
-        "C++",
-        "TCP/IP",
-        "Windows",
-        "Modbus",
-        "KNX",
-        "Microsoft Office",
-      ],
+      clase: "Certificado",
+      casa: "Cisco",
+      titulo: "IT Essentials: PC Hardware & Software",
+      descripcion:
+        "Conocimiento en diversos componentes de hardware, ensamblado de equipos, diagnósticos, instalación de sistemas operativos.",
+      periodo: "2017",
     },
     {
-      role: "Agente de Ventas",
-      periodoInicio: "01/2018",
-      periodoFin: "12/2018",
-      company: "VTR",
-      funciones: [
-        "· Ejecución de carta comercial a empresas.",
-        "· Entregar utilidad mediante ventas para aprovechar comisiones.",
-      ],
-      stack: ["Elastix", "VTR Email", "Libre Office"],
+      clase: "Certificado",
+      casa: "ETS TOEIC",
+      titulo: "Listening & Reading",
+      descripcion:
+        "Conocimientos del idioma inglés en lectura y audiencia, en ambientes profesionales.",
+      periodo: "2017",
     },
   ]);
   return (
@@ -82,6 +43,7 @@ const Wrapper_01 = () => {
       sx={{
         alignItems: "center",
         my:1
+        // border:1
       }}
       direction="column"
       alignItems="center"
@@ -116,7 +78,7 @@ const Wrapper_01 = () => {
                   // alignContent: "center",
                 }}
               >
-                {experiencia.role}
+                {experiencia.titulo}
               </Typography>
               <Grid
                 container
@@ -125,23 +87,9 @@ const Wrapper_01 = () => {
                   alignItems: "center",
                 }}
               >
+                
                 <Grid item>
-                  <Typography
-                    sx={{
-                      ml: 0.25,
-                      // border:1,
-                      color: "#505050",
-                      fontFamily: "Ubuntu",
-                      display: "flex",
-                      justifyContent: "center",
-                      mr:0.6,
-                    }}
-                  >
-                    {experiencia.periodoInicio}
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Icon_01 icon="time"></Icon_01>
+                  <Icon_01 icon={experiencia.clase}></Icon_01>
                 </Grid>
                 <Grid item>
                   <Typography
@@ -154,11 +102,36 @@ const Wrapper_01 = () => {
                       justifyContent: "center",
                     }}
                   >
-                    {experiencia.periodoFin}
+                    {experiencia.clase}
                   </Typography>
                 </Grid>
               </Grid>
               {/* aqui debe poner un grid ... */}
+              <Grid
+                container
+                sx={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Grid item>
+                  <Icon_01 icon="task"></Icon_01>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    sx={{
+                      ml: 0.5,
+                      // border:1,
+                      color: "#505050",
+                      fontFamily: "Ubuntu",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {experiencia.periodo}
+                  </Typography>
+                </Grid>
+              </Grid>
               <Grid
                 container
                 sx={{
@@ -172,7 +145,7 @@ const Wrapper_01 = () => {
                 <Grid item>
                   <Typography
                     sx={{
-                      ml: 0.25,
+                      ml: 0.5,
                       // border:1,
                       color: "#505050",
                       fontFamily: "Ubuntu",
@@ -180,11 +153,10 @@ const Wrapper_01 = () => {
                       justifyContent: "center",
                     }}
                   >
-                    {experiencia.company}
+                    {experiencia.casa}
                   </Typography>
                 </Grid>
               </Grid>
-              
             </Box>
             <Divider
               sx={
@@ -198,8 +170,25 @@ const Wrapper_01 = () => {
                 // border:1,
                 py: 1,
                 mx: 5,
+
+              }}
+            ><Typography
+              sx={{
+                fontFamily: "Ubuntu",
+                textAlign: "center",
               }}
             >
+              {experiencia.descripcion}
+            </Typography></Box>
+            
+            {/* <Box
+              sx={{
+                // border:1,
+                py: 1,
+                mx: 5,
+              }}
+            >
+              Funciones:
               {experiencia.funciones.map((funcion) => (
                 <Typography
                   sx={{
@@ -233,7 +222,7 @@ const Wrapper_01 = () => {
                   {item}
                 </Chip>
               ))}
-            </Grid>
+            </Grid> */}
           </Card>
         </>
       ))}
