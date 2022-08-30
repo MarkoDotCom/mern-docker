@@ -7,6 +7,8 @@ import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import Chip from "@mui/joy/Chip";
 import Card from "@mui/joy/Card";
+import Icon_01 from "./Icon_01";
+import Divider from "@mui/material/Divider";
 
 const Wrapper_01 = () => {
   const [experiencias, setExperiencias] = useState([
@@ -16,8 +18,8 @@ const Wrapper_01 = () => {
       periodoFin: "03/2022",
       company: "Buk",
       funciones: [
-        "Manejo y desarrollo de información contable para empresas.",
-        "Garantizar soluciones a preguntas planteadas por otros equipos de trabajo.",
+        "· Manejo y desarrollo de información contable para empresas.",
+        "· Garantizar soluciones a preguntas planteadas por otros equipos de trabajo.",
       ],
       stack: [
         "Ruby on Rails",
@@ -44,8 +46,8 @@ const Wrapper_01 = () => {
       periodoFin: "10/2019",
       company: "SIAC Solutions",
       funciones: [
-        "Elaboración de dispositivos electrónicos.",
-        "Instalación, mantenimiento y monitoreo de equipos de control centralizado.",
+        "· Elaboración de dispositivos electrónicos.",
+        "· Instalación, mantenimiento y monitoreo de equipos de control centralizado.",
       ],
       stack: [
         "Schneider Electric EcoStruxure Software",
@@ -66,82 +68,142 @@ const Wrapper_01 = () => {
       role: "Agente de Ventas",
       periodoInicio: "01/2018",
       periodoFin: "12/2018",
-      company: "VTR (Fidelis)",
+      company: "VTR",
       funciones: [
-        "Ejecución de carta comercial a empresas.",
-        "Entregar utilidad mediante ventas para aprovechar comisiones.",
+        "· Ejecución de carta comercial a empresas.",
+        "· Entregar utilidad mediante ventas para aprovechar comisiones.",
       ],
       stack: ["Elastix", "VTR Email", "Libre Office"],
     },
   ]);
   return (
-    <Container>
+    <Grid
+      container
+      sx={{
+        alignItems: "center",
+        // border:1
+      }}
+      direction="column"
+      alignItems="center"
+      justify="center"
+    >
       {experiencias.map((experiencia) => (
         <>
           <Card
+            item
             variant="outlined"
             sx={{
-              // border:1,
-              my: 2,
+              my: 1,
+              mx: 2,
+              width: "60%",
             }}
           >
-            <Typography
-              variant={"h5"}
+            <Box
               sx={{
-                fontFamily: "Bowlby One SC",
-                fontWeight: "bold",
                 // border: 1,
+                pb: 1,
               }}
             >
-              {experiencia.role}
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Ubuntu",
-              }}
-            >
-              {experiencia.periodoInicio} - {experiencia.periodoFin}
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Ubuntu",
-              }}
-            >
-              {experiencia.company}
-            </Typography>
-            {experiencia.funciones.map((funcion) => (
+              <Typography
+                variant={"h5"}
+                sx={{
+                  fontFamily: "Bowlby One SC",
+                  fontWeight: "bold",
+                  display: "flex",
+                  justifyContent: "center",
+                  color: "#505050",
+                  // border: 1,
+                  // alignContent: "center",
+                }}
+              >
+                {experiencia.role}
+              </Typography>
               <Typography
                 sx={{
                   fontFamily: "Ubuntu",
+                  display: "flex",
+                  color: "#505050",
+                  justifyContent: "center",
                 }}
               >
-                {funcion}
+                {experiencia.periodoInicio} - {experiencia.periodoFin}
               </Typography>
-            ))}
-
-            <Grid direction="row">
-              {experiencia.stack.map((item) => (
-                <>
-                  <Chip
+              {/* aqui debe poner un grid ... */}
+              <Grid
+                container
+                sx={{
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Grid item>
+                  <Icon_01 icon="business" ></Icon_01>
+                </Grid>
+                <Grid item>
+                  <Typography
                     sx={{
-                      border: 1,
-                      color: "#bb1919",
-                      flexWrap: "wrap",
-
-                      mt: 1,
-                      mx: 0.25,
+                      ml: 0.25,
+                      // border:1,
+                  color: "#505050",
+                  fontFamily: "Ubuntu",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
-                    variant="outlined"
                   >
-                    {item}
-                  </Chip>
-                </>
+                    {experiencia.company}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
+            <Divider
+              sx={{
+                // border: 1,
+              }}
+            ></Divider>
+            <Box
+              sx={{
+                // border:1,
+                py: 1,
+                mx: 5,
+              }}
+            >
+              Funciones:
+              {experiencia.funciones.map((funcion) => (
+                <Typography
+                  sx={{
+                    fontFamily: "Ubuntu",
+                  }}
+                >
+                  {funcion}
+                </Typography>
+              ))}
+            </Box>
+            <Grid direction="row" sx={{ 
+              // border:1,
+              px:5
+            }}
+            >
+              {experiencia.stack.map((item) => (
+                <Chip
+                  sx={{
+                    border: 0,
+                    color: "#fadddd",
+                    flexWrap: "wrap",
+                    my: 0.5,
+                    mx: 0.25,
+                    background:
+          "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+                  }}
+                  variant="outlined"
+                >
+                  {item}
+                </Chip>
               ))}
             </Grid>
           </Card>
         </>
       ))}
-    </Container>
+    </Grid>
   );
 };
 

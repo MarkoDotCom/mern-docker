@@ -36,8 +36,9 @@ const Typography_01 = ({ parrafo }) => {
           pl:"10%",
           background: "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
           WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent"
+          WebkitTextFillColor: "transparent",
           // ml:"20%"
+          // color: "#505050",
         }}
       >
         {parrafo.value} 
