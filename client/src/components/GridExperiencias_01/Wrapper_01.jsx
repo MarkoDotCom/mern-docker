@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import Chip from "@mui/joy/Chip";
 import Card from "@mui/joy/Card";
-import Icon_01 from "./Icon_01";
+import Icon01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
+// import Paper from "@mui/material/Paper";
+// import Stack from "@mui/material/Stack";
 
 const Wrapper_01 = () => {
-  const [experiencias, setExperiencias] = useState([
+  const [experiencias] = useState([
     {
       role: "Analista de Integraciones",
       periodoInicio: "10/2020",
@@ -141,7 +141,7 @@ const Wrapper_01 = () => {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Icon_01 icon="time"></Icon_01>
+                    <Icon01 icon="time"></Icon01>
                   </Grid>
                   <Grid item>
                     <Typography
@@ -167,7 +167,7 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Icon_01 icon="business"></Icon_01>
+                    <Icon01 icon="business"></Icon01>
                   </Grid>
                   <Grid item>
                     <Typography

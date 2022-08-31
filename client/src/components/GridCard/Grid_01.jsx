@@ -5,13 +5,12 @@ import Card from "./Card_01";
 import Container from "@mui/material/Container";
 
 const Grid_01 = () => {
-  const [parrafos, setParrafos] = useState([
+  const [parrafos] = useState([
     { tag: "Nombre", value: "Marco Sebastián González Barraza" },
     { tag: "Edad", value: "26 años" },
     { tag: "Nacionalidad", value: "Chileno" },
     { tag: "Dirección", value: "Avenida Santa María 227, Recoleta, Santiago, CL" },
     { tag: "Correo Electrónico", value: "msg.barraza@gmail.com" },
-    { tag: "Teléfono", value: "+56 9 4092 0875" },
     { tag: "Teléfono", value: "+56 9 4092 0875" },
   ]);
 
@@ -32,7 +31,7 @@ const Grid_01 = () => {
           display: "flex",
           flexWrap: "wrap",
           alignContent: "flex-start",
-          alignContent: "center",
+          // alignContent: "center",
           m: 0,
           p: 1,
         }}
@@ -50,7 +49,7 @@ const Grid_01 = () => {
             >
               <Card parrafo={parrafo} />
             </Grid>
-            {index % 2 == 0 ? (
+            {index % 2 === 0 ? (
               <Divider
               flexItem
                 orientation="vertical"

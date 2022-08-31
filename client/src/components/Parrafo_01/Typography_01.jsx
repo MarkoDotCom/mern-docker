@@ -5,17 +5,18 @@ const Typography_01 = ({ parrafo }) => {
   return (
     <Typography
       sx={{
-        // border:1,
-        // letterSpacing: 1,
         fontFamily: "Baloo 2",
         display: "flex",
+        fontSize: 18,
+        color: "#505050",
+        my: 2,
+        px: "5%",
+        // border:1,
+        // letterSpacing: 1,
         // color: "#bd472a",
         // fontWeight: "bold",
         // justifyContent: "left",
         // pl: "10%",
-        fontSize:18,
-            color: "#505050",
-            my: 2,
         // ml:"20%"
       }}
     >

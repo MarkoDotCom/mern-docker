@@ -1,23 +1,25 @@
 import React, { useState } from "react";
-import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
-import Chip from "@mui/joy/Chip";
 import Card from "@mui/joy/Card";
-import Icon_01 from "./Icon_01";
+import Icon01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
+// import Paper from "@mui/material/Paper";
+// import Stack from "@mui/material/Stack";
+// import Chip from "@mui/joy/Chip";
+// import Tooltip from "@mui/material/Tooltip";
+// import Button from '@mui/material/Button';
 
 const Wrapper_01 = () => {
-  const [experiencias, setExperiencias] = useState([
+  const [experiencias] = useState([
     {
       clase: "Titulo Profesional",
       casa: "DuocUC",
       titulo: "Analista Computacional",
       descripcion:
-        "Conocimiento técnico en lenguajes de programación, algoritmos complejos, enfoque lógico y metodologías para el apropiado desarrollo de proyectos, junto con habilidades en escritura para formular documentación y reportes.",
+        "Conocimiento en lenguajes de programación, algoritmos complejos, enfoque lógico y metodologías ágiles para el apropiado desarrollo de proyectos, junto con habilidades de escritura para formular documentación y reportes.",
       periodo: "2019",
     },
     {
@@ -39,12 +41,14 @@ const Wrapper_01 = () => {
   ]);
   return (
     <Container
-      sx={{
-        // border: 1,
-      }}
+      sx={
+        {
+          // border: 1,
+        }
+      }
     >
       <Grid
-        container
+        // container
         sx={{
           alignItems: "center",
           my: 1,
@@ -58,7 +62,6 @@ const Wrapper_01 = () => {
         {experiencias.map((experiencia) => (
           <>
             <Card
-              item
               variant="outlined"
               sx={{
                 my: 1,
@@ -94,10 +97,11 @@ const Wrapper_01 = () => {
                   sx={{
                     justifyContent: "center",
                     alignItems: "center",
+                    // border:1
                   }}
                 >
-                  <Grid item>
-                    <Icon_01 icon={experiencia.clase}></Icon_01>
+                  <Grid item sx={{ border: 1 }}>
+                    {/* <Button variant="text" startIcon={<Icon01 icon={experiencia.clase}/>}></Button> */}
                   </Grid>
                   <Grid item>
                     <Typography
@@ -123,7 +127,7 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Icon_01 icon="task"></Icon_01>
+                    <Icon01 icon="task"></Icon01>
                   </Grid>
                   <Grid item>
                     <Typography
@@ -148,7 +152,7 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Icon_01 icon="business"></Icon_01>
+                    <Icon01 icon="business"></Icon01>
                   </Grid>
                   <Grid item>
                     <Typography
