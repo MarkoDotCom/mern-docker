@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "./Typography_01";
-import Divider from "@mui/material/Divider";
+// import Divider from "@mui/material/Divider";
 
 
 const Card_01 = ({ parrafo }) => {
