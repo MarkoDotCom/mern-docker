@@ -12,6 +12,7 @@ const Grid_01 = () => {
     { tag: "Dirección", value: "Avenida Santa María 227, Recoleta, Santiago, CL" },
     { tag: "Correo Electrónico", value: "msg.barraza@gmail.com" },
     { tag: "Teléfono", value: "+56 9 4092 0875" },
+    { tag: "Teléfono", value: "+56 9 4092 0875" },
   ]);
 
 

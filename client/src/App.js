@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components';
-import { NavBar, Box, Box_00, GridCard, Banner_01, Parrafo_01, GridExperiencias_01, GridExperiencias_02 } from './components'
+import { NavBar, Box, Box_00, GridCard, Banner_01, Parrafo_01, GridExperiencias_01, GridExperiencias_02, GridIdiomas_01 } from './components'
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +23,7 @@ function App() {
             <Banner_01 titulo="Experiencia Académica" icon="academy" height="100"/>
             <GridExperiencias_02/>
             <Banner_01 titulo="Idiomas" icon="translate" height="100"/>
+            <GridIdiomas_01></GridIdiomas_01>
           </Route>
         </Switch>
     </>
