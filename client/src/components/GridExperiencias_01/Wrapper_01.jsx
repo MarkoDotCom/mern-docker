@@ -31,8 +31,7 @@ const Wrapper_01 = () => {
         "Sentry",
         "Trello",
         "Jira",
-        "Google",
-        "Workspace",
+        "Google Workspace",
         "Linux Ubuntu",
         "Windows",
         "Linq",
@@ -77,167 +76,168 @@ const Wrapper_01 = () => {
     },
   ]);
   return (
-    <Grid
-      container
-      sx={{
-        alignItems: "center",
-        my:1
-      }}
-      direction="column"
-      alignItems="center"
-      justify="center"
-    >
-      {experiencias.map((experiencia) => (
-        <>
-          <Card
-            item
-            variant="outlined"
-            sx={{
-              my: 1,
-              mx: 2,
-              width: "60%",
-            }}
-          >
-            <Box
+    <Container>
+      <Grid
+        container
+        sx={{
+          alignItems: "center",
+          my: 1,
+        }}
+        direction="column"
+        alignItems="center"
+        justify="center"
+      >
+        {experiencias.map((experiencia) => (
+          <>
+            <Card
+              item
+              variant="outlined"
               sx={{
-                // border: 1,
-                pb: 1,
+                my: 1,
+                mx: 2,
+                width: "90%",
               }}
             >
-              <Typography
-                variant={"h5"}
+              <Box
                 sx={{
-                  fontFamily: "Bowlby One SC",
-                  fontWeight: "bold",
-                  display: "flex",
-                  justifyContent: "center",
-                  color: "#505050",
                   // border: 1,
-                  // alignContent: "center",
+                  pb: 1,
                 }}
               >
-                {experiencia.role}
-              </Typography>
-              <Grid
-                container
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Grid item>
-                  <Typography
-                    sx={{
-                      ml: 0.25,
-                      // border:1,
-                      color: "#505050",
-                      fontFamily: "Ubuntu",
-                      display: "flex",
-                      justifyContent: "center",
-                      mr:0.6,
-                    }}
-                  >
-                    {experiencia.periodoInicio}
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Icon_01 icon="time"></Icon_01>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    sx={{
-                      ml: 0.6,
-                      // border:1,
-                      color: "#505050",
-                      fontFamily: "Ubuntu",
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {experiencia.periodoFin}
-                  </Typography>
-                </Grid>
-              </Grid>
-              {/* aqui debe poner un grid ... */}
-              <Grid
-                container
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Grid item>
-                  <Icon_01 icon="business"></Icon_01>
-                </Grid>
-                <Grid item>
-                  <Typography
-                    sx={{
-                      ml: 0.25,
-                      // border:1,
-                      color: "#505050",
-                      fontFamily: "Ubuntu",
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {experiencia.company}
-                  </Typography>
-                </Grid>
-              </Grid>
-              
-            </Box>
-            <Divider
-              sx={
-                {
-                  // border: 1,
-                }
-              }
-            ></Divider>
-            <Box
-              sx={{
-                // border:1,
-                py: 1,
-                mx: 5,
-              }}
-            >
-              {experiencia.funciones.map((funcion) => (
                 <Typography
+                  variant={"h5"}
                   sx={{
-                    fontFamily: "Ubuntu",
+                    fontFamily: "Bowlby One SC",
+                    fontWeight: "bold",
+                    display: "flex",
+                    justifyContent: "center",
+                    color: "#505050",
+                    // border: 1,
+                    // alignContent: "center",
                   }}
                 >
-                  {funcion}
+                  {experiencia.role}
                 </Typography>
-              ))}
-            </Box>
-            <Grid
-              direction="row"
-              sx={{
-                // border:1,
-                px: 5,
-              }}
-            >
-              {experiencia.stack.map((item) => (
-                <Chip
+                <Grid
+                  container
                   sx={{
-                    border: 0,
-                    color: "#fadddd",
-                    flexWrap: "wrap",
-                    my: 0.5,
-                    mx: 0.25,
-                    background:
-                      "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
-                  variant="outlined"
                 >
-                  {item}
-                </Chip>
-              ))}
-            </Grid>
-          </Card>
-        </>
-      ))}
-    </Grid>
+                  <Grid item>
+                    <Typography
+                      sx={{
+                        ml: 0.25,
+                        // border:1,
+                        color: "#505050",
+                        fontFamily: "Ubuntu",
+                        display: "flex",
+                        justifyContent: "center",
+                        mr: 0.6,
+                      }}
+                    >
+                      {experiencia.periodoInicio}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Icon_01 icon="time"></Icon_01>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      sx={{
+                        ml: 0.6,
+                        // border:1,
+                        color: "#505050",
+                        fontFamily: "Ubuntu",
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {experiencia.periodoFin}
+                    </Typography>
+                  </Grid>
+                </Grid>
+                {/* aqui debe poner un grid ... */}
+                <Grid
+                  container
+                  sx={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Grid item>
+                    <Icon_01 icon="business"></Icon_01>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      sx={{
+                        ml: 0.25,
+                        // border:1,
+                        color: "#505050",
+                        fontFamily: "Ubuntu",
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {experiencia.company}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Box>
+              <Divider
+                sx={
+                  {
+                    // border: 1,
+                  }
+                }
+              ></Divider>
+              <Box
+                sx={{
+                  // border:1,
+                  py: 1,
+                  mx: 5,
+                }}
+              >
+                {experiencia.funciones.map((funcion) => (
+                  <Typography
+                    sx={{
+                      fontFamily: "Ubuntu",
+                    }}
+                  >
+                    {funcion}
+                  </Typography>
+                ))}
+              </Box>
+              <Grid
+                direction="row"
+                sx={{
+                  // border:1,
+                  px: 5,
+                }}
+              >
+                {experiencia.stack.map((item) => (
+                  <Chip
+                    sx={{
+                      border: 0,
+                      color: "#fadddd",
+                      flexWrap: "wrap",
+                      my: 0.5,
+                      mx: 0.25,
+                      background:
+                        "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+                    }}
+                    variant="outlined"
+                  >
+                    {item}
+                  </Chip>
+                ))}
+              </Grid>
+            </Card>
+          </>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 

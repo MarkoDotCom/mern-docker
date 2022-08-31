@@ -11,63 +11,68 @@ import Icon_01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
 
 const Wrapper_01 = () => {
-  const [experiencias, setExperiencias] = useState([
+  const [idiomas, setIdiomas] = useState([
     {
-      clase: "Titulo Profesional",
-      casa: "DuocUC",
-      titulo: "Analista Computacional",
-      descripcion:
-        "Conocimiento técnico en lenguajes de programación, algoritmos complejos, enfoque lógico y metodologías para el apropiado desarrollo de proyectos, junto con habilidades en escritura para formular documentación y reportes.",
-      periodo: "2019",
+      idioma: "Español",
+      nivelHablado: "Nativo",
+      nivelEscrito: "Nativo",
     },
     {
-      clase: "Certificado",
-      casa: "Cisco",
-      titulo: "IT Essentials: PC Hardware & Software",
-      descripcion:
-        "Conocimiento en diversos componentes de hardware, ensamblado de equipos, diagnósticos, instalación de sistemas operativos.",
-      periodo: "2017",
+      idioma: "Inglés",
+      nivelHablado: "Medio",
+      nivelEscrito: "Avanzado",
     },
     {
-      clase: "Certificado",
-      casa: "ETS TOEIC",
-      titulo: "Listening & Reading",
-      descripcion:
-        "Conocimientos del idioma inglés en lectura y audiencia, en ambientes profesionales.",
-      periodo: "2017",
+      idioma: "Inglés",
+      nivelHablado: "Medio",
+      nivelEscrito: "Avanzado",
+    },
+    {
+      idioma: "Inglés",
+      nivelHablado: "Medio",
+      nivelEscrito: "Avanzado",
+    },
+    {
+      idioma: "Inglés",
+      nivelHablado: "Medio",
+      nivelEscrito: "Avanzado",
+    },
+    {
+      idioma: "Inglés",
+      nivelHablado: "Medio",
+      nivelEscrito: "Avanzado",
+    },
+    {
+      idioma: "Inglés",
+      nivelHablado: "Medio",
+      nivelEscrito: "Avanzado",
     },
   ]);
   return (
-    <Container
-      sx={{
-        // border: 1,
-      }}
-    >
+    <Container>
       <Grid
         container
         sx={{
           alignItems: "center",
           my: 1,
-          // border: 1,
+          // display: "flex",
+          border: 1,
         }}
-        direction="column"
+        direction="row"
         alignItems="center"
         justify="center"
-        columns={2}
       >
-        {experiencias.map((experiencia) => (
+        {idiomas.map((idioma) => (
           <>
             <Card
               item
               variant="outlined"
               sx={{
+                border: 1,
                 my: 1,
                 mx: 2,
-                width: "90%",
-
-                // border:1,
+                // width: "400px",
               }}
-              xs={6}
             >
               <Box
                 sx={{
@@ -87,7 +92,7 @@ const Wrapper_01 = () => {
                     // alignContent: "center",
                   }}
                 >
-                  {experiencia.titulo}
+                  {idioma.idioma}
                 </Typography>
                 <Grid
                   container
@@ -96,9 +101,7 @@ const Wrapper_01 = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Grid item>
-                    <Icon_01 icon={experiencia.clase}></Icon_01>
-                  </Grid>
+                  <Grid item>{/* <Icon_01 icon="time"></Icon_01> */}</Grid>
                   <Grid item>
                     <Typography
                       sx={{
@@ -110,7 +113,7 @@ const Wrapper_01 = () => {
                         justifyContent: "center",
                       }}
                     >
-                      {experiencia.clase}
+                      {idioma.nivelEscrito}
                     </Typography>
                   </Grid>
                 </Grid>
@@ -136,59 +139,58 @@ const Wrapper_01 = () => {
                         justifyContent: "center",
                       }}
                     >
-                      {experiencia.periodo}
+                      {idioma.nivelHablado}
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid
-                  container
-                  sx={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Grid item>
-                    <Icon_01 icon="business"></Icon_01>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      sx={{
-                        ml: 0.5,
-                        // border:1,
-                        color: "#505050",
-                        fontFamily: "Ubuntu",
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {experiencia.casa}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Box>
-              <Divider
-                sx={
-                  {
-                    // border: 1,
-                  }
-                }
-              ></Divider>
-              <Box
+                {/* <Grid
+                container
                 sx={{
-                  // border:1,
-                  py: 1,
-                  mx: 5,
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                    textAlign: "center",
-                  }}
-                >
-                  {experiencia.descripcion}
-                </Typography>
+                <Grid item>
+                  <Icon_01 icon="business"></Icon_01>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    sx={{
+                      ml: 0.5,
+                      // border:1,
+                      color: "#505050",
+                      fontFamily: "Ubuntu",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {idioma.casa}
+                  </Typography>
+                </Grid>
+              </Grid> */}
               </Box>
+              {/* <Divider
+              sx={
+                {
+                  // border: 1,
+                }
+              }
+            ></Divider> */}
+              {/* <Box
+              sx={{
+                // border:1,
+                py: 1,
+                mx: 5,
+
+              }}
+            ><Typography
+              sx={{
+                fontFamily: "Ubuntu",
+                textAlign: "center",
+              }}
+            >
+              {idioma.descripcion}
+            </Typography></Box> */}
 
               {/* <Box
               sx={{
@@ -198,7 +200,7 @@ const Wrapper_01 = () => {
               }}
             >
               Funciones:
-              {experiencia.funciones.map((funcion) => (
+              {idioma.funciones.map((funcion) => (
                 <Typography
                   sx={{
                     fontFamily: "Ubuntu",
@@ -215,7 +217,7 @@ const Wrapper_01 = () => {
                 px: 5,
               }}
             >
-              {experiencia.stack.map((item) => (
+              {idioma.stack.map((item) => (
                 <Chip
                   sx={{
                     border: 0,
