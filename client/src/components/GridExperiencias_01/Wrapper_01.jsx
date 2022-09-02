@@ -90,7 +90,7 @@ const Wrapper_01 = () => {
         {experiencias.map((experiencia) => (
           <>
             <Card
-              item
+              
               variant="outlined"
               sx={{
                 my: 1,
@@ -210,7 +210,7 @@ const Wrapper_01 = () => {
                 ))}
               </Box>
               <Grid
-                direction="row"
+                // direction="row"
                 sx={{
                   // border:1,
                   px: 5,

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import Card from "./Card_01";
@@ -37,7 +37,7 @@ const Grid_01 = () => {
         }}
       >
         {parrafos.map((parrafo, index) => (
-          <>
+          <Fragment key={index}>
             <Grid
               item
               xs={6}
@@ -60,7 +60,7 @@ const Grid_01 = () => {
             ) : (
               <></>
             )}
-          </>
+          </Fragment> 
         ))}
       </Grid>
     </Container>
