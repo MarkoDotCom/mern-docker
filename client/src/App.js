@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 // import { Home } from './pages'
 
-function App() {
+const App = () => {
   return (
     <>
         <Switch>
@@ -20,10 +20,10 @@ function App() {
             <Parrafo01/>
             <Banner01 titulo="Experiencia Laboral" icon="homework" height="100"/>
             <GridExperiencias01/>
-            <Banner01 titulo="Experiencia Académica" icon="academy" height="100"/>
+            {/*<Banner01 titulo="Experiencia Académica" icon="academy" height="100"/>
             <GridExperiencias02/>
             <Banner01 titulo="Idiomas" icon="translate" height="100"/>
-            <GridIdiomas01></GridIdiomas01>
+            <GridIdiomas01></GridIdiomas01> */}
           </Route>
         </Switch>
     </>
