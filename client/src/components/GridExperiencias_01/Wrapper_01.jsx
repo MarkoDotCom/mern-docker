@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import * as React from "react";
+import { useState, Fragment } from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+// import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Chip from "@mui/joy/Chip";
 import Card from "@mui/joy/Card";
 import Icon01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
+import { Tooltip } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import IconButton from "@mui/material/IconButton";
+import Tooltip01 from "./Tooltip01";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 // import Paper from "@mui/material/Paper";
 // import Stack from "@mui/material/Stack";
 
@@ -75,6 +83,19 @@ const Wrapper_01 = () => {
       stack: ["Elastix", "VTR Email", "Libre Office"],
     },
   ]);
+  const MyComponent = React.forwardRef(function MyComponent(props, ref) {
+    return (
+      <div>
+        <Icon01 {...props} innerRef={ref}></Icon01>
+      </div>
+    );
+  });
+
+  // const SomeContent = React.forwardRef((props, ref) => (
+  //   <Icon01 {...props} ref={ref}></Icon01>
+  // ));
+  //   return
+  // }
   return (
     <Container>
       <Grid
@@ -87,10 +108,9 @@ const Wrapper_01 = () => {
         alignItems="center"
         justify="center"
       >
-        {experiencias.map((experiencia) => (
-          <>
+        {experiencias.map((experiencia, index) => (
+          <Fragment key={index}>
             <Card
-              
               variant="outlined"
               sx={{
                 my: 1,
@@ -140,9 +160,19 @@ const Wrapper_01 = () => {
                       {experiencia.periodoInicio}
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <Icon01 icon="time"></Icon01>
-                  </Grid>
+                  <Tooltip title="Periodo" arrow>
+                      <div>
+                        
+                  <MyComponent icon="time"></MyComponent>
+                      </div>
+                  </Tooltip>
+                  {/* <Grid item> */}
+                  {/* <Stack spacing={2} direction="row">
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+    </Stack> */}
+                  {/* </Grid> */}
                   <Grid item>
                     <Typography
                       sx={{
@@ -185,13 +215,7 @@ const Wrapper_01 = () => {
                   </Grid>
                 </Grid>
               </Box>
-              <Divider
-                sx={
-                  {
-                    // border: 1,
-                  }
-                }
-              ></Divider>
+              <Divider />
               <Box
                 sx={{
                   // border:1,
@@ -199,14 +223,16 @@ const Wrapper_01 = () => {
                   mx: 5,
                 }}
               >
-                {experiencia.funciones.map((funcion) => (
-                  <Typography
-                    sx={{
-                      fontFamily: "Ubuntu",
-                    }}
-                  >
-                    {funcion}
-                  </Typography>
+                {experiencia.funciones.map((funcion, index) => (
+                  <Fragment key={index}>
+                    <Typography
+                      sx={{
+                        fontFamily: "Ubuntu",
+                      }}
+                    >
+                      {funcion}
+                    </Typography>
+                  </Fragment>
                 ))}
               </Box>
               <Grid
@@ -216,25 +242,27 @@ const Wrapper_01 = () => {
                   px: 5,
                 }}
               >
-                {experiencia.stack.map((item) => (
-                  <Chip
-                    sx={{
-                      border: 0,
-                      color: "#fadddd",
-                      flexWrap: "wrap",
-                      my: 0.5,
-                      mx: 0.25,
-                      background:
-                        "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
-                    }}
-                    variant="outlined"
-                  >
-                    {item}
-                  </Chip>
+                {experiencia.stack.map((item, index) => (
+                  <Fragment key={index}>
+                    <Chip
+                      sx={{
+                        border: 0,
+                        color: "#fadddd",
+                        flexWrap: "wrap",
+                        my: 0.5,
+                        mx: 0.25,
+                        background:
+                          "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+                      }}
+                      variant="outlined"
+                    >
+                      {item}
+                    </Chip>
+                  </Fragment>
                 ))}
               </Grid>
             </Card>
-          </>
+          </Fragment>
         ))}
       </Grid>
     </Container>

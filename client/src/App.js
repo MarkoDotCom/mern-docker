@@ -8,12 +8,13 @@ import {
   // Link
 } from "react-router-dom";
 // import { Home } from './pages'
+import { ThemeProvider } from "@mui/material/styles";
 
 const App = () => {
   return (
     <>
-        <Switch>
-          <Route exact path="/">
+        {/* <Switch> */}
+          {/* <Route exact path="/"> */}
             <Banner01 titulo="Bienvenidos" icon="diamond" height="200"/>
             <GridCard/>
             <Banner01 titulo="Carta de Presentación" icon="person" height="100"/>
@@ -24,8 +25,8 @@ const App = () => {
             <GridExperiencias02/>
             <Banner01 titulo="Idiomas" icon="translate" height="100"/>
             <GridIdiomas01></GridIdiomas01> */}
-          </Route>
-        </Switch>
+          {/* </Route> */}
+        {/* </Switch> */}
     </>
   );
 }
