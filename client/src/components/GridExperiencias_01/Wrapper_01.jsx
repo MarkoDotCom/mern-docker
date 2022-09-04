@@ -13,8 +13,8 @@ import { Tooltip } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import Tooltip01 from "./Tooltip01";
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 // import Paper from "@mui/material/Paper";
 // import Stack from "@mui/material/Stack";
 
@@ -83,11 +83,10 @@ const Wrapper_01 = () => {
       stack: ["Elastix", "VTR Email", "Libre Office"],
     },
   ]);
+  
   const MyComponent = React.forwardRef(function MyComponent(props, ref) {
     return (
-      <div>
         <Icon01 {...props} innerRef={ref}></Icon01>
-      </div>
     );
   });
 
@@ -160,19 +159,18 @@ const Wrapper_01 = () => {
                       {experiencia.periodoInicio}
                     </Typography>
                   </Grid>
-                  <Tooltip title="Periodo" arrow>
-                      <div>
-                        
-                  <MyComponent icon="time"></MyComponent>
-                      </div>
+                  <Tooltip title="Período de Contribución" arrow>
+                    <div>
+                      <Grid item>
+                        <MyComponent icon="time"></MyComponent>
+                      </Grid>
+                    </div>
                   </Tooltip>
-                  {/* <Grid item> */}
                   {/* <Stack spacing={2} direction="row">
       <Button variant="text">Text</Button>
       <Button variant="contained">Contained</Button>
       <Button variant="outlined">Outlined</Button>
     </Stack> */}
-                  {/* </Grid> */}
                   <Grid item>
                     <Typography
                       sx={{
@@ -197,7 +195,11 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Icon01 icon="business"></Icon01>
+                    <Tooltip arrow title="Compañía">
+                      <div>
+                        <MyComponent icon="business"></MyComponent>
+                      </div>
+                    </Tooltip>
                   </Grid>
                   <Grid item>
                     <Typography

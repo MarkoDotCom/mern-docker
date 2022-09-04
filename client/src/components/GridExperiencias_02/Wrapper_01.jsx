@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -9,10 +9,14 @@ import Divider from "@mui/material/Divider";
 // import Paper from "@mui/material/Paper";
 // import Stack from "@mui/material/Stack";
 // import Chip from "@mui/joy/Chip";
-// import Tooltip from "@mui/material/Tooltip";
+import Tooltip from "@mui/material/Tooltip";
 // import Button from '@mui/material/Button';
 
 const Wrapper_01 = () => {
+  const MyComponent = React.forwardRef(function MyComponent(props, ref) {
+    return <Icon01 {...props} innerRef={ref}></Icon01>;
+  });
+
   const [experiencias] = useState([
     {
       clase: "Titulo Profesional",
@@ -40,36 +44,27 @@ const Wrapper_01 = () => {
     },
   ]);
   return (
-    <Container
-      sx={
-        {
-          // border: 1,
-        }
-      }
-    >
+    <Container>
       <Grid
-        // container
+        container
         sx={{
           alignItems: "center",
           my: 1,
-          // border: 1,
         }}
         direction="column"
         alignItems="center"
         justify="center"
-        columns={2}
       >
-        {experiencias.map((experiencia) => (
-          <>
+        {experiencias.map((experiencia, index) => (
+          <Fragment key={index}>
             <Card
               variant="outlined"
               sx={{
                 my: 1,
                 mx: 2,
                 width: "90%",
-
-                // border:1,
               }}
+              // border:1,
               xs={6}
             >
               <Box
@@ -100,8 +95,12 @@ const Wrapper_01 = () => {
                     // border:1
                   }}
                 >
-                  <Grid item sx={{ border: 1 }}>
-                    {/* <Button variant="text" startIcon={<Icon01 icon={experiencia.clase}/>}></Button> */}
+                  <Grid item>
+                    <Tooltip arrow title="Tipo de Certificado">
+                      <div>
+                        <MyComponent icon={experiencia.clase}></MyComponent>
+                      </div>
+                    </Tooltip>
                   </Grid>
                   <Grid item>
                     <Typography
@@ -127,7 +126,11 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Icon01 icon="task"></Icon01>
+                    <Tooltip arrow title="Año de Certificación">
+                      <div>
+                        <MyComponent icon="task"></MyComponent>
+                      </div>
+                    </Tooltip>
                   </Grid>
                   <Grid item>
                     <Typography
@@ -152,7 +155,11 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Icon01 icon="business"></Icon01>
+                    <Tooltip arrow title="Institución">
+                      <div>
+                        <MyComponent icon="business"></MyComponent>
+                      </div>
+                    </Tooltip>
                   </Grid>
                   <Grid item>
                     <Typography
@@ -200,27 +207,27 @@ const Wrapper_01 = () => {
                 py: 1,
                 mx: 5,
               }}
-            >
+              >
               Funciones:
               {experiencia.funciones.map((funcion) => (
                 <Typography
-                  sx={{
-                    fontFamily: "Ubuntu",
-                  }}
+                sx={{
+                  fontFamily: "Ubuntu",
+                }}
                 >
-                  {funcion}
+                {funcion}
                 </Typography>
-              ))}
-            </Box>
-            <Grid
-              direction="row"
-              sx={{
-                // border:1,
-                px: 5,
-              }}
-            >
-              {experiencia.stack.map((item) => (
-                <Chip
+                ))}
+                </Box>
+                <Grid
+                direction="row"
+                sx={{
+                  // border:1,
+                  px: 5,
+                }}
+                >
+                {experiencia.stack.map((item) => (
+                  <Chip
                   sx={{
                     border: 0,
                     color: "#fadddd",
@@ -229,15 +236,15 @@ const Wrapper_01 = () => {
                     mx: 0.25,
                     background:
                       "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
-                  }}
-                  variant="outlined"
-                >
-                  {item}
-                </Chip>
-              ))}
-            </Grid> */}
+                    }}
+                    variant="outlined"
+                    >
+                    {item}
+                    </Chip>
+                    ))}
+                  </Grid> */}
             </Card>
-          </>
+          </Fragment>
         ))}
       </Grid>
     </Container>
