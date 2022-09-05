@@ -3,14 +3,18 @@ import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
 // import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 // import Chip from "@mui/joy/Chip";
-import Card from "@mui/joy/Card";
+import Card from "@mui/material/Card";
 import Icon01 from "./Icon_01";
 // import Divider from "@mui/material/Divider";
 
 const Wrapper_01 = () => {
+  const MyComponent = React.forwardRef(function MyComponent(props, ref) {
+    return <Icon01 {...props} innerRef={ref}></Icon01>;
+  });
   const [idiomas] = useState([
     {
       idioma: "Español",
@@ -28,18 +32,12 @@ const Wrapper_01 = () => {
       <Grid
         container
         sx={{
-          // justifyContent: "center",
-          // alignItems: "center",
+          alignItems: "center",
           my: 1,
-          // mx: 1,
-          // width: "90%",
-          // display: "flex",
-          // border: 1,
-          // justifyContent: "center",
         }}
-        // direction="column"
-        // alignItems="center"
-        // justify="center"
+        direction="row"
+        alignItems="center"
+        justify="center"
       >
         {idiomas.map((idioma) => (
           <>
@@ -55,12 +53,14 @@ const Wrapper_01 = () => {
               }}
             >
               <Card
-                variant="outlined"
+                elevation={3}
                 sx={{
-                  // border: 1,
                   my: 1,
-                  mx: 1.5,
-                  width: "100%",
+                  mx: 2,
+                  width: "90%",
+                  // border:1,
+                  p: "1.25rem",
+                  borderRadius: "1rem",
                 }}
               >
                 <Box
@@ -93,7 +93,11 @@ const Wrapper_01 = () => {
                     }}
                   >
                     <Grid item>
-                      <Icon01 icon="speak"></Icon01>
+                      <Tooltip title="Hablado">
+                        <div>
+                          <MyComponent icon="speak"></MyComponent>
+                        </div>
+                      </Tooltip>
                     </Grid>
                     <Grid item>
                       <Typography
@@ -119,7 +123,11 @@ const Wrapper_01 = () => {
                     }}
                   >
                     <Grid item>
-                      <Icon01 icon="writting"></Icon01>
+                      <Tooltip title="Escrito">
+                        <div>
+                          <Icon01 icon="writting"></Icon01>
+                        </div>
+                      </Tooltip>
                     </Grid>
                     <Grid item>
                       <Typography

@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Card from "@mui/joy/Card";
+import Card from "@mui/material/Card";
 import Icon01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
 // import Paper from "@mui/material/Paper";
@@ -58,14 +58,15 @@ const Wrapper_01 = () => {
         {experiencias.map((experiencia, index) => (
           <Fragment key={index}>
             <Card
-              variant="outlined"
+              elevation={3}
               sx={{
                 my: 1,
                 mx: 2,
                 width: "90%",
+                // border:1,
+                p:"1.25rem",
+                borderRadius:"1rem"
               }}
-              // border:1,
-              xs={6}
             >
               <Box
                 sx={{
