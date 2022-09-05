@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Chip from "@mui/joy/Chip";
-import Card from "@mui/joy/Card";
+import Card from "@mui/material/Card";
 import Icon01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
 import { Tooltip } from "@mui/material";
@@ -110,11 +110,14 @@ const Wrapper_01 = () => {
         {experiencias.map((experiencia, index) => (
           <Fragment key={index}>
             <Card
-              variant="outlined"
+              elevation={3}
               sx={{
                 my: 1,
                 mx: 2,
                 width: "90%",
+                // border:1,
+                p:"1.25rem",
+                borderRadius:"1rem"
               }}
             >
               <Box

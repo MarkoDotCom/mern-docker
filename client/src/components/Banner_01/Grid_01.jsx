@@ -9,7 +9,7 @@ import Typography from "./Typography_01"
 import Box from "@mui/material/Box";
 
 
-const Grid_01 = ({titulo, icon, height}) => {
+const Grid_01 = ({titulo, icon, height, fontVariant}) => {
 	// const [parrafo, setParrafo] = useState("Colaborador interesado en mejorar sus habilidades tecnológicas en el desarrollo de software computacional. Ofrezco utilidad en áreas de interes como son el desarrollo de aplicaciones, redes, electrónica, robótica, ecología y botánica. Mantengo mis mejores expectativas para ser una gran contribución y también con quienes me inviten a ser parte de sus proyectos.")
 
   return (
@@ -59,7 +59,7 @@ const Grid_01 = ({titulo, icon, height}) => {
             }
           }
         >
-          <Typography titulo={titulo} ></Typography>
+          <Typography titulo={titulo} fontVariant={fontVariant}></Typography>
           </Grid>
 
 

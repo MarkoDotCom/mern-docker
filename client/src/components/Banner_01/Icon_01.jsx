@@ -22,7 +22,7 @@ const Icon_01 = ({ icon }) => {
         <DiamondTwoToneIcon
           sx={{
             color: "#ffffff",
-            fontSize: 50,
+            fontSize: 100,
           }}
         />
       );
