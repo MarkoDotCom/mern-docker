@@ -31,11 +31,12 @@ const Wrapper_01 = () => {
       ],
       stack: [
         "Ruby on Rails",
+        "Slack",
         "Gitlab",
         "PostgreSQL",
-        "Slack",
         "Gather",
         "Freshdesk",
+        "Scrum",
         "Sentry",
         "Trello",
         "Jira",
@@ -198,7 +199,7 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Tooltip arrow title="Compañía">
+                    <Tooltip arrow title="Nombre de Compañía">
                       <div>
                         <MyComponent icon="business"></MyComponent>
                       </div>

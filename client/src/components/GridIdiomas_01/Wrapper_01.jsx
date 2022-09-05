@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 // import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -39,8 +39,8 @@ const Wrapper_01 = () => {
         alignItems="center"
         justify="center"
       >
-        {idiomas.map((idioma) => (
-          <>
+        {idiomas.map((idioma, index) => (
+          <Fragment key={index}>
             <Grid
               item
               xs={6}
@@ -93,7 +93,7 @@ const Wrapper_01 = () => {
                     }}
                   >
                     <Grid item>
-                      <Tooltip title="Hablado">
+                      <Tooltip arrow title="Nivel Hablado">
                         <div>
                           <MyComponent icon="speak"></MyComponent>
                         </div>
@@ -123,7 +123,7 @@ const Wrapper_01 = () => {
                     }}
                   >
                     <Grid item>
-                      <Tooltip title="Escrito">
+                      <Tooltip arrow title="Nivel Escrito">
                         <div>
                           <Icon01 icon="writting"></Icon01>
                         </div>
@@ -237,7 +237,7 @@ const Wrapper_01 = () => {
             </Grid> */}
               </Card>
             </Grid>
-          </>
+          </Fragment>
         ))}
       </Grid>
     </Container>

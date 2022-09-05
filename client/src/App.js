@@ -18,12 +18,13 @@ const App = () => {
             <GridCard/>
             <Banner01 titulo="Carta de Presentación" icon="person" height="150" fontVariant="h2"/>
             <Parrafo01/>
-            <Banner01 titulo="Experiencia Laboral" icon="homework" height="150" fontVariant="h2"/>
+            <Banner01 titulo="Experiencias Laborales" icon="homework" height="150" fontVariant="h2"/>
             <GridExperiencias01/>
-            <Banner01 titulo="Experiencia Académica" icon="academy" height="150" fontVariant="h2"/>
+            <Banner01 titulo="Evidencias Académicas" icon="academy" height="150" fontVariant="h2"/>
             <GridExperiencias02/>
             <Banner01 titulo="Idiomas" icon="translate" height="150" fontVariant="h2"/>
             <GridIdiomas01></GridIdiomas01>
+            <Banner01 titulo="Competencias Tecnológicas" icon="Layer" height="150" fontVariant="h2"/>
           {/* </Route> */}
         {/* </Switch> */}
     </>

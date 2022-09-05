@@ -19,7 +19,7 @@ const Wrapper_01 = () => {
 
   const [experiencias] = useState([
     {
-      clase: "Titulo Profesional",
+      clase: "Titulo Profesional Asociado",
       casa: "DuocUC",
       titulo: "Analista Computacional",
       descripcion:
@@ -27,7 +27,7 @@ const Wrapper_01 = () => {
       periodo: "2019",
     },
     {
-      clase: "Certificado",
+      clase: "Certificación Digital",
       casa: "Cisco",
       titulo: "IT Essentials: PC Hardware & Software",
       descripcion:
@@ -35,7 +35,7 @@ const Wrapper_01 = () => {
       periodo: "2017",
     },
     {
-      clase: "Certificado",
+      clase: "Certificación Digital",
       casa: "ETS TOEIC",
       titulo: "Listening & Reading",
       descripcion:
@@ -156,7 +156,7 @@ const Wrapper_01 = () => {
                   }}
                 >
                   <Grid item>
-                    <Tooltip arrow title="Institución">
+                    <Tooltip arrow title="Nombre de Institución">
                       <div>
                         <MyComponent icon="business"></MyComponent>
                       </div>

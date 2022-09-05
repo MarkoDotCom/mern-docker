@@ -41,7 +41,7 @@ const Icon_01 = ({ icon }) => {
           }}
         />
       );
-    case "Certificado":
+    case "Certificación Digital":
       return (
         <ClassTwoToneIcon
           sx={{
@@ -50,7 +50,7 @@ const Icon_01 = ({ icon }) => {
           }}
         />
       );
-    case "Titulo Profesional":
+    case "Titulo Profesional Asociado":
       return (
         // <Tooltip title="estrella" disableInteractive>
           <GradeTwoToneIcon
@@ -63,7 +63,7 @@ const Icon_01 = ({ icon }) => {
       );
 
     default:
-      return <div>"no_icon";</div>;
+      return <div>no_icon</div>;
   }
 };
 
