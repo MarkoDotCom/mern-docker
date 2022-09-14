@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 // import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Chip from "@mui/joy/Chip";
+import Chip from "@mui/material/Chip";
 import Card from "@mui/material/Card";
 import Icon01 from "./Icon_01";
 import Divider from "@mui/material/Divider";
@@ -252,6 +252,7 @@ const Wrapper_01 = () => {
                   <Fragment key={index}>
                     <Chip
                       sx={{
+                        fontSize: "1rem",
                         border: 0,
                         color: "#fadddd",
                         flexWrap: "wrap",
@@ -261,8 +262,9 @@ const Wrapper_01 = () => {
                           "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
                       }}
                       variant="outlined"
+                      label={item}
                     >
-                      {item}
+                      {/* {item} */}
                     </Chip>
                   </Fragment>
                 ))}
