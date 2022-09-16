@@ -1,6 +1,6 @@
 import './App.css';
 // import styled from 'styled-components';
-import { GridCard, Banner01, Parrafo01, GridExperiencias01, GridExperiencias02, GridIdiomas01, CompetenciasTecnologicas } from './components'
+import { GridCard, Banner01, Parrafo01, GridExperiencias01, GridExperiencias02, GridIdiomas01, CompetenciasTecnologicas, Subtitulo01 } from './components'
 import {
   // BrowserRouter as Router,
   Switch,
@@ -26,6 +26,7 @@ const App = () => {
             <GridIdiomas01></GridIdiomas01>
             <Banner01 titulo="Competencias Tecnológicas" icon="Layer" height="120" fontVariant="h2"/>
             <CompetenciasTecnologicas></CompetenciasTecnologicas>
+            <Subtitulo01></Subtitulo01>
           {/* </Route> */}
         {/* </Switch> */}
     </>
