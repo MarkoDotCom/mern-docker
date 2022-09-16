@@ -14,17 +14,17 @@ import { FixedSizeList } from "react-window";
 import { v4 as uuid } from "uuid";
 
 const CompetenciasTecnologicas = () => {
+  // mejorar el tipo de coleccion
   const [lenguajes] = useState([
     ["C#", "C++", "CSS"],
     ["HTML", "JAVA", "JavaScript"],
     ["JSON", "PHP", "Ruby"],
     ["SQL", "TypeScript", "XML"],
+    ["SQL", "TypeScript"],
   ]);
 
   function Banner(props) {
     const currentArray = props.item;
-    console.log(currentArray);
-    console.log("hola aqui");
     return (
       <Container
         sx={{
@@ -42,9 +42,11 @@ const CompetenciasTecnologicas = () => {
           alignItems="center"
           justify="center"
         >
-          {currentArray.map((item) => (
+          {currentArray.map((item, index) => (
             <Grid
+              key={index}
               item
+              columns={{xs: item.lenght}}
               xs={4}
               sx={{
                 // border:1,
@@ -106,7 +108,7 @@ const CompetenciasTecnologicas = () => {
   return (
     <Carousel
       autoPlay={true}
-      animation="slide"
+      animation="fade"
       indicators={false}
       duration={500}
       navButtonsAlwaysVisible={false}
