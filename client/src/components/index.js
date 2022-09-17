@@ -11,6 +11,7 @@ import GridExperiencias02 from "./GridExperiencias_02/Wrapper_01";
 import GridIdiomas01 from "./GridIdiomas_01/Wrapper_01";
 import CompetenciasTecnologicas from "./CompetenciasTecnologicas/CompetenciasTecnologicas";
 import Subtitulo01 from "./Subtitulo01/Subtitulo01";
+import NavBar01 from "./NavBar01/NavBar01"
 
 export {
   Links,
@@ -23,4 +24,5 @@ export {
   GridIdiomas01,
   CompetenciasTecnologicas,
   Subtitulo01,
+  NavBar01
 };
