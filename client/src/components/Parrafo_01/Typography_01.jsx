@@ -9,7 +9,7 @@ const Typography_01 = ({ parrafo }) => {
         fontFamily: "Baloo 2",
         display: "flex",
         fontSize: 20,
-        color: "#505050",
+        color: "#ffffff",
         my: 2,
         px: "5%",
           // lineHeight: "100%"
