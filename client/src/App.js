@@ -9,6 +9,7 @@ import {
   CompetenciasTecnologicas,
   Subtitulo01,
   NavBar01,
+  MainBanner01,
 } from "./components";
 import { Switch, Route } from "react-router-dom";
 
@@ -32,13 +33,13 @@ const App = () => {
         <DrawerHeader />
         <Switch>
           <Route exact path="/">
-            <Banner01
-              titulo="Bienvenidos"
-              icon="diamond"
-              height="200"
-              fontVariant="h1"
-            />
-            <GridCard />
+            <MainBanner01>
+
+            </MainBanner01>
+            <Parrafo01 />
+            
+          </Route>
+          <Route path="/carta-presentacion">
             <Banner01
               titulo="Carta de Presentación"
               icon="person"
@@ -46,6 +47,8 @@ const App = () => {
               fontVariant="h2"
             />
             <Parrafo01 />
+          </Route>
+          <Route path="/experiencias-laborales">
             <Banner01
               titulo="Experiencias Laborales"
               icon="homework"
@@ -53,6 +56,8 @@ const App = () => {
               fontVariant="h2"
             />
             <GridExperiencias01 />
+          </Route>
+          <Route path="/experiencias-academicas">
             <Banner01
               titulo="Evidencias Académicas"
               icon="academy"
@@ -60,6 +65,8 @@ const App = () => {
               fontVariant="h2"
             />
             <GridExperiencias02 />
+          </Route>
+          <Route path="/idiomas">
             <Banner01
               titulo="Idiomas"
               icon="translate"
@@ -67,24 +74,15 @@ const App = () => {
               fontVariant="h2"
             />
             <GridIdiomas01></GridIdiomas01>
+          </Route>
+          <Route path="/competencias-tecnologicas">
             <Banner01
               titulo="Competencias Tecnológicas"
               icon="Layer"
               height="120"
               fontVariant="h2"
             />
-            <Subtitulo01>Lenguajes de Programación</Subtitulo01>
             <CompetenciasTecnologicas></CompetenciasTecnologicas>
-          </Route>
-          <Route path="/gridcard">
-            <GridCard />
-            <Banner01
-              titulo="Carta de Presentación"
-              icon="person"
-              height="120"
-              fontVariant="h2"
-            />
-            <Parrafo01 />
           </Route>
         </Switch>
       </Box>

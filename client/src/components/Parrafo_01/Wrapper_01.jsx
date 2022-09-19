@@ -14,8 +14,15 @@ const Wrapper_01 = () => {
 
   return (
     <Container
+      // color="transparent"
       sx={{
         py: 1,
+        // // backgroundColor: "rgba(    255,255,2,0.3)",
+        // backgroundColor: "transparent",
+        // boxShadow: "none",
+        position: "relative",
+        // display:"flex",
+        // border:1,
       }}
     >
       <Grid
@@ -32,8 +39,10 @@ const Wrapper_01 = () => {
             // border: 1,
             display: "flex",
             justifyContent: "center",
-            my:5,
-            pl:5
+            my: 5,
+            pl: 5,
+            //       backgroundColor: 'transparent',
+            // boxShadow: 'none',
           }}
           xs={5}
         >
@@ -43,18 +52,17 @@ const Wrapper_01 = () => {
           > */}
 
           <Box>
+            {/* foto */}
             <Avatar
               sx={{
                 width: 200,
                 height: 200,
-                
                 // border: 1,
               }}
               src={foto}
-              duration={2000}
-              ></Avatar>
+            ></Avatar>
           </Box>
-              {/* </Image> */}
+          {/* </Image> */}
         </Grid>
         <Grid
           item
