@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import Typography from "./Typography_01";
-import foto from "./fotito.jpg";
+import foto from "./Image01.jpg";
 import Image from "mui-image";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -14,66 +14,83 @@ const Wrapper_01 = () => {
 
   return (
     <Container
-      // color="transparent"
       sx={{
-        py: 1,
-        // // backgroundColor: "rgba(    255,255,2,0.3)",
-        // backgroundColor: "transparent",
-        // boxShadow: "none",
+        // py: 1,
         position: "relative",
-        // display:"flex",
+        // display: "inline-block",
+        height: "90vh",
+        justifyContent: "center",
+          alignItems:"center",
+          // height: "10vh",
+        // paddingBottom: "50%",
+        // width: "50%",
+        // pt:"12rem",
         // border:1,
       }}
     >
       <Grid
         container
+        direction="row"
+        justifyContent="center"
+        // alignItems="stretch"
         sx={{
-          justifyContent: "center",
-          alignItems: "center",
-          // border: 1,
+          display: "flex",
+
+          height: "90vh",
+          // mt:"50,
+// margin:"auto",
+// width:"100%",
+        // border: 2,
+        // justifyContent: "center",
+          alignItems:"center",
+        // p:1
+        // height:"100vh"
+        // justifyContent: "center",
+          // alignItems: "center",
         }}
       >
         <Grid
           item
           sx={{
-            // border: 1,
             display: "flex",
+            // border:  3,
+            color:"#FFFFFF",
             justifyContent: "center",
-            my: 5,
-            pl: 5,
-            //       backgroundColor: 'transparent',
-            // boxShadow: 'none',
+            // my: 5,
+            // pl: 5,
           }}
-          xs={5}
+          xs={6}
         >
-          {/* <Image
-                        src={foto}
-
-          > */}
-
           <Box>
-            {/* foto */}
             <Avatar
               sx={{
-                width: 200,
-                height: 200,
-                // border: 1,
+                width: 240,
+                height: 240,
               }}
               src={foto}
             ></Avatar>
           </Box>
-          {/* </Image> */}
         </Grid>
         <Grid
           item
-          sx={
-            {
-              // border: 1,
-            }
-          }
-          xs={7}
+          sx={{
+            // border: 10,
+            // boxSizing: "border-box"
+            // pb: "100vh"
+            // position: 'relative',
+            // top:"35vh",
+            // width:"100%",
+            // bottom: 0,
+              // height: "100%",
+
+              // overflow: "auto",
+              // display: 'flex',
+              // flexDirection: 'column'
+
+          }}
+          xs={12} md={6}
         >
-          <Typography parrafo={parrafo}></Typography>
+          <Typography></Typography>
         </Grid>
       </Grid>
     </Container>

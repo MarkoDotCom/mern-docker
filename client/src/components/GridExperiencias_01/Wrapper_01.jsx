@@ -97,7 +97,12 @@ const Wrapper_01 = () => {
   //   return
   // }
   return (
-    <Container>
+    <Container 
+      sx={{
+        position: "relative",
+
+      }}
+    >
       <Grid
         container
         sx={{

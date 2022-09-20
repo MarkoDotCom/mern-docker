@@ -17,7 +17,8 @@ const Grid_01 = ({titulo, icon, height, fontVariant}) => {
       sx={
         {
           // my:1,
-          // border: 1,
+          position: "relative",
+        // border: 1,
           background:
           "linear-gradient(315deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
         }

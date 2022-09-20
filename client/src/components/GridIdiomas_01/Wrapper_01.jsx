@@ -32,7 +32,8 @@ const Wrapper_01 = () => {
       <Grid
         container
         sx={{
-          alignItems: "center",
+        position: "relative",
+        alignItems: "center",
           my: 1,
         }}
         direction="row"
