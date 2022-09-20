@@ -20,7 +20,6 @@ const CompetenciasTecnologicas = () => {
     ["HTML", "JAVA", "JavaScript"],
     ["JSON", "PHP", "Ruby"],
     ["SQL", "TypeScript", "XML"],
-    ["SQL", "TypeScript"],
   ]);
 
   function Banner(props) {

@@ -16,13 +16,12 @@ const Typography_01 = () => {
   const [parrafo] = useState(
     // <Typography variant="h6">Soy un <strong>Ingeniero Analista Computacional</strong> asociado a la Institución Académica DuocUC. <br/>Me especializo en desarrollo <strong>Full-Stack</strong> usando <strong>ReactJS</strong> y <strong>Node.js</strong>.<br/> Ofrezco <strong>proyectos atractivos</strong> con un <strong>diseño minimalista</strong>, al mismo tiempo que me preocupo por mantener una <strong>experiencia de usuario</strong> de calidad.</Typography>
     <Typography variant="h5">
-      Soy un <strong>Ingeniero Analista Computacional</strong> asociado a la
-      Institución Académica DuocUC. <br />
-      Me especializo en desarrollo <strong>Full-Stack</strong> usando{" "}
-      <strong>ReactJS</strong> y <strong>Node.js</strong>.<br /> Ofrezco{" "}
-      <strong>proyectos atractivos</strong> con un{" "}
-      <strong>diseño minimalista</strong>, al mismo tiempo que me preocupo por
-      mantener una <strong>experiencia de usuario</strong> de calidad.
+      Soy un <b>Ingeniero Analista Computacional</b> asociado a la Institución
+      Académica DuocUC. <br />
+      Me especializo en desarrollo <b>Full-Stack</b> usando <b>ReactJS</b> y{" "}
+      <b>Node.js</b>.<br /> Ofrezco <b>proyectos atractivos</b> con un{" "}
+      <b>diseño minimalista</b>, al mismo tiempo que me preocupo por obtener una{" "}
+      <b>experiencia de usuario</b> de calidad.
     </Typography>
 
     // "Colaborador interesado en mejorar sus habilidades tecnológicas en el desarrollo de software computacional. Ofrezco utilidad en áreas de interés como desarrollo de aplicaciones, redes, electrónica, robótica, ecología y botánica. Mantengo mis mejores expectativas para ser una gran contribución y también con quienes me inviten a ser parte de sus proyectos."
@@ -49,8 +48,8 @@ const Typography_01 = () => {
         // textAlign:"center",
         // verticalAlign: "middle",
         // border:1,
-        pr: "2rem",
-        pl: "5rem",
+        // pr: "2rem",
+        // pl: "5rem",
         // display: "block",
         // m:"auto",
         // position: "absolute",
