@@ -30,7 +30,14 @@ const App = () => {
     <>
       <MainBanner01></MainBanner01>
       <NavBar01></NavBar01>
-      <Box component="main" sx={{ flexGrow: 1 }}>
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          pl: "4rem",
+          // pt: "1rem",
+        }}
+      >
         <DrawerHeader />
         <Switch>
           <Route exact path="/">
