@@ -28,16 +28,13 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 const App = () => {
   return (
     <>
+      <MainBanner01></MainBanner01>
       <NavBar01></NavBar01>
       <Box component="main" sx={{ flexGrow: 1 }}>
         <DrawerHeader />
         <Switch>
           <Route exact path="/">
-            <MainBanner01>
-
-            </MainBanner01>
             <Parrafo01 />
-            
           </Route>
           <Route path="/carta-presentacion">
             <Banner01
@@ -87,7 +84,6 @@ const App = () => {
         </Switch>
       </Box>
       {/* <Route exact path="/"> */}
-
       {/* </Route> */}
       {/* </Switch> */}
     </>

@@ -48,6 +48,8 @@ const Wrapper_01 = () => {
       <Grid
         container
         sx={{
+        position: "relative",
+
           alignItems: "center",
           my: 1,
         }}

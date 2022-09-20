@@ -109,7 +109,7 @@ export default function MiniDrawer() {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{  }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -132,8 +132,17 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            MSGB Curricular
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{
+              fontFamily: "Noto Sans Display",
+              
+            }}
+            
+          >
+            <strong>MSGB</strong> Curricular
           </Typography>
         </Toolbar>
       </AppBar>
@@ -149,7 +158,6 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          
           <ListItem disablePadding sx={{ display: "block" }}>
             <ListItemButton
               component={Link}
