@@ -18,7 +18,7 @@ const CompetenciasTecnologicas = () => {
   const [lenguajes] = useState([
     ["C#", "C++", "CSS"],
     ["HTML", "JAVA", "JavaScript"],
-    ["JSON", "PHP", "Ruby"],
+    // ["JSON", "PHP", "Ruby"],
     ["SQL", "TypeScript", "XML"],
   ]);
 
