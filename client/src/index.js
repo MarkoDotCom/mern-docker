@@ -8,8 +8,8 @@ import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 import { unstable_createMuiStrictModeTheme } from "@mui/material/styles";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { StyledEngineProvider } from '@mui/material/styles';
-
+import { StyledEngineProvider } from "@mui/material/styles";
+import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
 const theme = createTheme();
 
 Sentry.init({
@@ -21,14 +21,15 @@ Sentry.init({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-
-    {/* <ThemeProvider theme={theme}> */}
-      {/* <CssVarsProvider> */}
+      <ScopedCssBaseline>
+        <ThemeProvider theme={theme}>
+        {/* <CssVarsProvider> */}
         <Router>
           <App></App>
         </Router>
-      {/* </CssVarsProvider> */}
-    {/* </ThemeProvider> */}
+        {/* </CssVarsProvider> */}
+        </ThemeProvider>
+      </ScopedCssBaseline>
     </StyledEngineProvider>
   </React.StrictMode>
 );

@@ -70,9 +70,12 @@ const Wrapper_01 = () => {
               arrow
               title={
                 <React.Fragment>
-                  "Mantengo mis mejores expectativas para ser
-una <b>gran contribución</b>, asi como con quienes me inviten a ser parte de sus proyectos".
-                  <Typography color="inherit" textAlign="right"><i>Marco Sebastián González Barraza</i></Typography>
+                  "Mantengo mis mejores expectativas para ser una{" "}
+                  <b>gran contribución</b>, asi como con quienes me inviten a
+                  ser parte de sus proyectos".
+                  <Typography color="inherit" textAlign="right">
+                    <i>Marco Sebastián González Barraza</i>
+                  </Typography>
                 </React.Fragment>
               }
             >

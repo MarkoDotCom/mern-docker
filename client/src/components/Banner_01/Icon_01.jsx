@@ -7,62 +7,51 @@ import SchoolTwoToneIcon from "@mui/icons-material/SchoolTwoTone";
 import TranslateTwoToneIcon from "@mui/icons-material/TranslateTwoTone";
 import LayersIcon from "@mui/icons-material/Layers";
 
+
+const styles = {
+  color: "#ffffff",
+  fontSize: {
+    xs: "3rem",
+    md: "4rem",
+  },
+  // border:1,
+  mr: "1.5rem"
+};
+
 const Icon_01 = ({ icon }) => {
   switch (icon) {
     case "person":
-      return (
-        <PersonOutlineTwoToneIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: "5rem",
-          }}
-        />
-      );
+      return <PersonOutlineTwoToneIcon sx={styles} />;
     case "diamond":
       return (
         <DiamondTwoToneIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: 100,
-          }}
+          sx={styles}
         />
       );
     case "homework":
       return (
         <Diversity3TwoToneIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: "5rem",
-          }}
+          sx={styles}
         />
       );
     case "academy":
       return (
         <SchoolTwoToneIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: "5rem",
-          }}
+          sx={styles}
         />
       );
     case "translate":
       return (
         <TranslateTwoToneIcon
-          sx={{
-            color: "#ffffff",
-            fontSize: "5rem",
-          }}
+          sx={styles}
         />
       );
-      case "Layer":
-        return (
-          <LayersIcon
-            sx={{
-              color: "#ffffff",
-              fontSize: "5rem",
-            }}
-          />
-        );
+    case "Layer":
+      return (
+        <LayersIcon
+          sx={styles}
+        />
+      );
     default:
       break;
   }
