@@ -33,7 +33,9 @@ const Typography_01 = () => {
       // variant="h1"
       align="justify"
       sx={{
+        // ml:"3rem",
         fontFamily: "Noto Sans",
+        // border:3,
         // display: "flex",
         // justifyContent: "center",
         // alignItems:"center",

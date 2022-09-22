@@ -12,6 +12,22 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList } from "react-window";
 import { v4 as uuid } from "uuid";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+
+let theme = createTheme({
+  typography: {
+    fontFamily: "Noto Sans",
+    fontWeight: 'bold',
+    
+    // xs: "h1",
+    // fontWeight: "bold",
+  },
+});
+theme = responsiveFontSizes(theme);
 
 const CompetenciasTecnologicas = () => {
   // mejorar el tipo de coleccion
@@ -27,15 +43,17 @@ const CompetenciasTecnologicas = () => {
     return (
       <Container
         sx={{
-          my: "auto",
-          pb:0.5
+          // my: "auto",
+          pb: 0.5,
+          // border: 1,
+          pl: "4.5rem",
         }}
       >
         <Grid
           container
           sx={{
             alignItems: "center",
-            my: 1,
+            my: "1rem",
           }}
           direction="row"
           alignItems="center"
@@ -45,25 +63,29 @@ const CompetenciasTecnologicas = () => {
             <Grid
               key={index}
               item
-              columns={{xs: item.lenght}}
+              // columns={{ xs: item.lenght }}
               xs={4}
               sx={{
-                // border:1,
-                alignItems: "center",
+                // border: 1,
+                // alignItems: "center",
+                px:".25rem",
                 justifyContent: "center",
                 // justify: "center",
                 display: "flex",
+                // mx:".1rem"
               }}
             >
               <Chip
                 sx={{
                   color: "#fadddd",
                   // flexWrap: "wrap",
-                  borderRadius: 10,
-                  p: "2rem",
-                  my: 0.5,
-                  fontSize: "2rem",
-                  mx: 0.25,
+                  border:1,
+                  borderRadius: "2rem",
+                  // m: "1.5rem",
+                  py:"2rem",
+                  // m: "1rem",
+                  fontSize: "1rem",
+                  // mx: 0.25,
                   justifyContent: "center",
                   // height: "2.5rem",
                   // width: 200,
@@ -71,18 +93,28 @@ const CompetenciasTecnologicas = () => {
                     "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
                 }}
                 label={
-                  <Typography
-                    variant="body"
-                    sx={{
-                      fontFamily: "Ubuntu",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {item}
-                  </Typography>
+                  <ThemeProvider theme={theme}>
+                    <Typography 
+                      variant="body"
+                      sx={{
+                        // position: "relative",
+                        // border:1,
+                        px:"2rem",
+                        display: "flex",
+                        // fontFamily: "Ubuntu",
+                        // display: "flex", 
+                        justifyContent: "center",
+                        alignItems: "center",
+                        typography: {
+                          xs: "h5",
+                          md: "h4",
+                          //   useNextVariants: true
+                        },
+                      }}
+                    >
+                      {item}
+                    </Typography>
+                  </ThemeProvider>
                 }
               ></Chip>
             </Grid>
