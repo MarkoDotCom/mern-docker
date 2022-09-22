@@ -28,16 +28,16 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 const App = () => {
   return (
     <>
-      <MainBanner01></MainBanner01>
       <NavBar01></NavBar01>
       <Box
-        component="main"
+        // component="main"
         sx={{
-          flexGrow: 1,
-          pl: "4rem",
+          // flexGrow: 1,
+          // ml: "flex-start",
           // pt: "1rem",
         }}
-      >
+        >
+        <MainBanner01></MainBanner01>
         <DrawerHeader />
         <Switch>
           <Route exact path="/">
@@ -45,6 +45,7 @@ const App = () => {
           </Route>
           <Route path="/carta-presentacion">
             <Banner01
+            // key="aqui"
               titulo="Carta de Presentación"
               icon="person"
               height="120"
@@ -53,12 +54,12 @@ const App = () => {
             <Parrafo01 />
           </Route>
           <Route path="/experiencias-laborales">
-            <Banner01
+            {/* <Banner01
               titulo="Experiencias Laborales"
               icon="homework"
               height="120"
               fontVariant="h2"
-            />
+            /> */}
             <GridExperiencias01 />
           </Route>
           <Route path="/experiencias-academicas">
