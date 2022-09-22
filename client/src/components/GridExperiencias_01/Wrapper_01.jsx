@@ -17,6 +17,18 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 // import Paper from "@mui/material/Paper";
 // import Stack from "@mui/material/Stack";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+
+let theme = createTheme({
+  typography: {
+    fontFamily: ['"Noto Sans"', "Salsa"].join(","),
+  },
+});
+theme = responsiveFontSizes(theme);
 
 const Wrapper_01 = () => {
   const [experiencias] = useState([
@@ -84,11 +96,9 @@ const Wrapper_01 = () => {
       stack: ["Elastix", "VTR Email", "Libre Office"],
     },
   ]);
-  
+
   const MyComponent = React.forwardRef(function MyComponent(props, ref) {
-    return (
-        <Icon01 {...props} innerRef={ref}></Icon01>
-    );
+    return <Icon01 {...props} innerRef={ref}></Icon01>;
   });
 
   // const SomeContent = React.forwardRef((props, ref) => (
@@ -97,192 +107,195 @@ const Wrapper_01 = () => {
   //   return
   // }
   return (
-    <Container 
-      sx={{
-        position: "relative",
-        // border:3,
-        pl:"4.4rem"
-
-      }}
-    >
-      <Grid
-        container
+    <ThemeProvider theme={theme}>
+      <Container
         sx={{
-          alignItems: "center",
-          my: 1,
+          position: "relative",
+          // border:3,
+          pl: "4.4rem",
         }}
-        direction="column"
-        alignItems="center"
-        justify="center"
       >
-        {experiencias.map((experiencia, index) => (
-          <Fragment key={index}>
-            <Card
-              elevation={3}
-              sx={{
-                my: 2,
-                mx: 2,
-                width: "90%",
-                // border:1,
-                p:"1.25rem",
-                borderRadius:"1rem"
-              }}
-            >
-              <Box
+        <Grid
+          container
+          sx={{
+            alignItems: "center",
+            my: 1,
+          }}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          {experiencias.map((experiencia, index) => (
+            <Fragment key={index}>
+              <Card
+                elevation={3}
                 sx={{
-                  // border: 1,
-                  pb: 1,
+                  my: 2,
+                  mx: 2,
+                  width: "90%",
+                  // border:1,
+                  p: "1.25rem",
+                  borderRadius: "1rem",
                 }}
               >
-                <Typography
-                  variant={"h5"}
-                  align="center"
+                <Box
                   sx={{
-                    fontFamily: "Bowlby One SC",
-                    fontWeight: "bold",
-                    display: "flex",
-                    justifyContent: "center",
-                    color: "#505050",
                     // border: 1,
-                    // alignContent: "center",
+                    pb: 1,
                   }}
                 >
-                  {experiencia.role}
-                </Typography>
-                <Grid
-                  container
-                  sx={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Grid item>
-                    <Typography
-                      sx={{
-                        ml: 0.25,
-                        // border:1,
-                        color: "#505050",
-                        fontFamily: "Ubuntu",
-                        display: "flex",
-                        justifyContent: "center",
-                        mr: 0.6,
-                      }}
-                    >
-                      {experiencia.periodoInicio}
-                    </Typography>
-                  </Grid>
-                  <Tooltip title="Período de Contribución" arrow>
-                    <div>
-                      <Grid item>
-                        <MyComponent icon="time"></MyComponent>
-                      </Grid>
-                    </div>
-                  </Tooltip>
-                  {/* <Stack spacing={2} direction="row">
+                  <Typography
+                    variant={"h5"}
+                    align="center"
+                    sx={{
+                      fontFamily: "Noto Sans",
+                      // fontFamily: "Salsa",
+                      fontWeight: "bold",
+                      display: "flex",
+                      justifyContent: "center",
+                      color: "#505050",
+                      mb:".25rem"
+                    }}
+                  >
+                    {experiencia.role}
+                  </Typography>
+                  <Grid
+                    container
+                    sx={{
+                      // border:1,
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Grid item>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          color: "#505050",
+                          fontFamily: "Noto Sans",
+                          display: "flex",
+                          justifyContent: "center",
+                          mx: 0.6,
+                        }}
+                      >
+                        {experiencia.periodoInicio}
+                      </Typography>
+                    </Grid>
+                    <Tooltip title="Período de Contribución" arrow>
+                      <div>
+                        <Grid item>
+                          <MyComponent icon="time"></MyComponent>
+                        </Grid>
+                      </div>
+                    </Tooltip>
+                    {/* <Stack spacing={2} direction="row">
       <Button variant="text">Text</Button>
       <Button variant="contained">Contained</Button>
       <Button variant="outlined">Outlined</Button>
     </Stack> */}
-                  <Grid item>
-                    <Typography
-                      sx={{
-                        ml: 0.6,
-                        // border:1,
-                        color: "#505050",
-                        fontFamily: "Ubuntu",
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {experiencia.periodoFin}
-                    </Typography>
+                    <Grid item>
+                      <Typography 
+                        variant="subtitle1"
+                        sx={{
+                          color: "#505050",
+                          fontFamily: "Noto Sans",
+                          display: "flex",
+                          justifyContent: "center",
+                          mx: 0.6,
+                        }}
+                      >
+                        {experiencia.periodoFin}
+                      </Typography>
+                    </Grid>
                   </Grid>
-                </Grid>
-                {/* aqui debe poner un grid ... */}
-                <Grid
-                  container
+                  {/* aqui debe poner un grid ... */}
+                  <Grid
+                    container
+                    sx={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Grid item>
+                      <Tooltip arrow title="Nombre de Compañía">
+                        <div>
+                          <MyComponent icon="business"></MyComponent>
+                        </div>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          ml: 0.25,
+                          // border:1,
+                          color: "#505050",
+                          fontFamily: "Noto Sans",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {experiencia.company}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Box>
+                {/* <Divider /> */}
+                <Box
                   sx={{
-                    justifyContent: "center",
-                    alignItems: "center",
+                    // border:1,
+                    py: ".5rem",
+                    mx: "1rem",
                   }}
                 >
-                  <Grid item>
-                    <Tooltip arrow title="Nombre de Compañía">
-                      <div>
-                        <MyComponent icon="business"></MyComponent>
-                      </div>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      sx={{
-                        ml: 0.25,
-                        // border:1,
-                        color: "#505050",
-                        fontFamily: "Ubuntu",
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {experiencia.company}
-                    </Typography>
-                  </Grid>
+                  {experiencia.funciones.map((funcion, index) => (
+                    <Fragment key={index}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontFamily: "Noto Sans",
+                        }}
+                      >
+                        {funcion}
+                      </Typography>
+                    </Fragment>
+                  ))}
+                </Box>
+                <Divider sx={{ mb: 1 }} />
+                <Grid
+                  // direction="row"
+                  sx={{
+                    // border:1,
+                    mx: ".25rem",
+                  }}
+                >
+                  {experiencia.stack.map((item, index) => (
+                    <Fragment key={index}>
+                      <Chip
+                        sx={{
+                          fontSize: "1rem",
+                          border: 0,
+                          color: "#fadddd",
+                          flexWrap: "wrap",
+                          my: 0.5,
+                          mx: 0.25,
+                          background:
+                            "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
+                        }}
+                        variant="outlined"
+                        label={item}
+                      >
+                        {/* {item} */}
+                      </Chip>
+                    </Fragment>
+                  ))}
                 </Grid>
-              </Box>
-              {/* <Divider /> */}
-              <Box
-                sx={{
-                  // border:1,
-                  py: 1,
-                  mx: 5,
-                }}
-              >
-                {experiencia.funciones.map((funcion, index) => (
-                  <Fragment key={index}>
-                    <Typography
-                      sx={{
-                        fontFamily: "Ubuntu",
-                      }}
-                    >
-                      {funcion}
-                    </Typography>
-                  </Fragment>
-                ))}
-              </Box>
-              <Divider  sx={{mb:1}}/>
-              <Grid
-                // direction="row"
-                sx={{
-                  // border:1,
-                  px: 5,
-                }}
-              >
-                {experiencia.stack.map((item, index) => (
-                  <Fragment key={index}>
-                    <Chip
-                      sx={{
-                        fontSize: "1rem",
-                        border: 0,
-                        color: "#fadddd",
-                        flexWrap: "wrap",
-                        my: 0.5,
-                        mx: 0.25,
-                        background:
-                          "linear-gradient(342deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
-                      }}
-                      variant="outlined"
-                      label={item}
-                    >
-                      {/* {item} */}
-                    </Chip>
-                  </Fragment>
-                ))}
-              </Grid>
-            </Card>
-          </Fragment>
-        ))}
-      </Grid>
-    </Container>
+              </Card>
+            </Fragment>
+          ))}
+        </Grid>
+      </Container>
+    </ThemeProvider>
   );
 };
 

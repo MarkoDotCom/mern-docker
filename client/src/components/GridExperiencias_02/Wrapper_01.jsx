@@ -11,6 +11,18 @@ import Divider from "@mui/material/Divider";
 // import Chip from "@mui/joy/Chip";
 import Tooltip from "@mui/material/Tooltip";
 // import Button from '@mui/material/Button';
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+
+let theme = createTheme({
+  typography: {
+    fontFamily: ['"Noto Sans"', "Salsa"].join(","),
+  },
+});
+theme = responsiveFontSizes(theme);
 
 const Wrapper_01 = () => {
   const MyComponent = React.forwardRef(function MyComponent(props, ref) {
@@ -44,12 +56,14 @@ const Wrapper_01 = () => {
     },
   ]);
   return (
-    <Container sx={{
-      position: "relative",
-      // border:3,
-      pl:"4.4rem"
+    <ThemeProvider theme={theme}>
 
-    }}>
+
+    <Container sx={{
+          position: "relative",
+          // border:3,
+          pl: "4.4rem",
+        }}>
       <Grid
         container
         sx={{
@@ -80,16 +94,16 @@ const Wrapper_01 = () => {
                 }}
               >
                 <Typography
-                  align="center"
                   variant={"h5"}
+                  align="center"
                   sx={{
-                    fontFamily: "Bowlby One SC",
+                    fontFamily: "Noto Sans",
+                    // fontFamily: "Salsa",
                     fontWeight: "bold",
                     display: "flex",
                     justifyContent: "center",
                     color: "#505050",
-                    // border: 1,
-                    // alignContent: "center",
+                    mb:".25rem"
                   }}
                 >
                   {experiencia.titulo}
@@ -111,13 +125,13 @@ const Wrapper_01 = () => {
                   </Grid>
                   <Grid item>
                     <Typography
+                      variant="subtitle1"
                       sx={{
-                        ml: 0.6,
-                        // border:1,
                         color: "#505050",
-                        fontFamily: "Ubuntu",
+                        fontFamily: "Noto Sans",
                         display: "flex",
                         justifyContent: "center",
+                        mx: 0.6,
                       }}
                     >
                       {experiencia.clase}
@@ -141,13 +155,13 @@ const Wrapper_01 = () => {
                   </Grid>
                   <Grid item>
                     <Typography
+                      variant="subtitle1"
                       sx={{
-                        ml: 0.5,
-                        // border:1,
                         color: "#505050",
-                        fontFamily: "Ubuntu",
+                        fontFamily: "Noto Sans",
                         display: "flex",
                         justifyContent: "center",
+                        mx: 0.6,
                       }}
                     >
                       {experiencia.periodo}
@@ -170,13 +184,13 @@ const Wrapper_01 = () => {
                   </Grid>
                   <Grid item>
                     <Typography
+                      variant="subtitle1"
                       sx={{
-                        ml: 0.5,
-                        // border:1,
                         color: "#505050",
-                        fontFamily: "Ubuntu",
+                        fontFamily: "Noto Sans",
                         display: "flex",
                         justifyContent: "center",
+                        mx: 0.6,
                       }}
                     >
                       {experiencia.casa}
@@ -194,14 +208,14 @@ const Wrapper_01 = () => {
               <Box
                 sx={{
                   // border:1,
-                  py: 1,
-                  mx: 5,
+                  py: ".5rem",
+                  mx: "1rem",
                 }}
               >
                 <Typography
+                  variant="body2"
                   sx={{
-                    fontFamily: "Ubuntu",
-                    textAlign: "center",
+                    fontFamily: "Noto Sans",
                   }}
                 >
                   {experiencia.descripcion}
@@ -255,6 +269,7 @@ const Wrapper_01 = () => {
         ))}
       </Grid>
     </Container>
+    </ThemeProvider>
   );
 };
 
