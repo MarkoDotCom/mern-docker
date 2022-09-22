@@ -1,5 +1,17 @@
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+
+let theme = createTheme({
+  typography: {
+    fontFamily: ['"Noto Sans"', "Salsa"].join(","),
+  },
+});
+theme = responsiveFontSizes(theme);
 
 const Typography_01 = () => {
   // const [parrafo] = useState(
@@ -15,12 +27,12 @@ const Typography_01 = () => {
 
   const [parrafo] = useState(
     // <Typography variant="h6">Soy un <strong>Ingeniero Analista Computacional</strong> asociado a la Institución Académica DuocUC. <br/>Me especializo en desarrollo <strong>Full-Stack</strong> usando <strong>ReactJS</strong> y <strong>Node.js</strong>.<br/> Ofrezco <strong>proyectos atractivos</strong> con un <strong>diseño minimalista</strong>, al mismo tiempo que me preocupo por mantener una <strong>experiencia de usuario</strong> de calidad.</Typography>
-    <Typography variant="h5">
-      Soy un <b>Ingeniero Analista Computacional</b> asociado a la Institución
+    <Typography variant="body1">
+      Soy <b>Ingeniero Analista Computacional</b> asociado a la Institución
       Académica DuocUC. <br />
       Me especializo en desarrollo <b>Full-Stack</b> usando <b>ReactJS</b> y{" "}
       <b>Node.js</b>.<br /> Ofrezco <b>proyectos atractivos</b> con un{" "}
-      <b>diseño minimalista</b>, al mismo tiempo que me preocupo por obtener una{" "}
+      <b>diseño minimalista</b>, al mismo tiempo que me preocupo de asegurar una{" "}
       <b>experiencia de usuario</b> de calidad.
     </Typography>
 
@@ -29,6 +41,8 @@ const Typography_01 = () => {
   );
 
   return (
+    <ThemeProvider theme={theme}>
+
     <Typography
       // variant="h1"
       align="justify"
@@ -36,6 +50,7 @@ const Typography_01 = () => {
         // ml:"3rem",
         fontFamily: "Noto Sans",
         // border:3,
+        px:"1.5rem",
         // display: "flex",
         // justifyContent: "center",
         // alignItems:"center",
@@ -71,6 +86,8 @@ const Typography_01 = () => {
     >
       {parrafo}
     </Typography>
+    </ThemeProvider>
+
   );
 };
 
