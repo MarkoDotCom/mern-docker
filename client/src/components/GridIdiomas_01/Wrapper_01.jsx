@@ -10,6 +10,18 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import Icon01 from "./Icon_01";
 // import Divider from "@mui/material/Divider";
+import {
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@mui/material/styles";
+
+let theme = createTheme({
+  typography: {
+    fontFamily: ['"Noto Sans"', "Salsa"].join(","),
+  },
+});
+theme = responsiveFontSizes(theme);
 
 const Wrapper_01 = () => {
   const MyComponent = React.forwardRef(function MyComponent(props, ref) {
@@ -28,6 +40,8 @@ const Wrapper_01 = () => {
     },
   ]);
   return (
+    <ThemeProvider theme={theme}>
+
     <Container sx={{
       position: "relative",
       // border:3,
@@ -107,13 +121,13 @@ const Wrapper_01 = () => {
                     </Grid>
                     <Grid item>
                       <Typography
+                        variant="subtitle1"
                         sx={{
-                          ml: 0.5,
-                          // border:1,
                           color: "#505050",
-                          fontFamily: "Ubuntu",
+                          fontFamily: "Noto Sans",
                           display: "flex",
                           justifyContent: "center",
+                          mx: 0.6,
                         }}
                       >
                         {idioma.nivelHablado}
@@ -137,13 +151,13 @@ const Wrapper_01 = () => {
                     </Grid>
                     <Grid item>
                       <Typography
+                        variant="subtitle1"
                         sx={{
-                          ml: 0.6,
-                          // border:1,
                           color: "#505050",
-                          fontFamily: "Ubuntu",
+                          fontFamily: "Noto Sans",
                           display: "flex",
                           justifyContent: "center",
+                          mx: 0.6,
                         }}
                       >
                         {idioma.nivelEscrito}
@@ -247,6 +261,7 @@ const Wrapper_01 = () => {
         ))}
       </Grid>
     </Container>
+    </ThemeProvider>
   );
 };
 

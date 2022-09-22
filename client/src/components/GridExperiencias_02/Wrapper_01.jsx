@@ -34,8 +34,9 @@ const Wrapper_01 = () => {
       clase: "Titulo Profesional Asociado",
       casa: "DuocUC",
       titulo: "Analista Computacional",
-      descripcion:
+      descripcion: [
         "Conocimiento en lenguajes de programación, algoritmos complejos, enfoque lógico y metodologías ágiles para el apropiado desarrollo de proyectos, junto con habilidades de escritura para formular documentación y reportes.",
+      ],
       periodo: "2019",
     },
     {
@@ -57,172 +58,172 @@ const Wrapper_01 = () => {
   ]);
   return (
     <ThemeProvider theme={theme}>
-
-
-    <Container sx={{
+      <Container
+        sx={{
           position: "relative",
           // border:3,
           pl: "4.4rem",
-        }}>
-      <Grid
-        container
-        sx={{
-          alignItems: "center",
-          my: 1,
         }}
-        direction="column"
-        alignItems="center"
-        justify="center"
       >
-        {experiencias.map((experiencia, index) => (
-          <Fragment key={index}>
-            <Card
-              elevation={3}
-              sx={{
-                my: 2,
-                mx: 2,
-                width: "90%",
-                // border:1,
-                p:"1.25rem",
-                borderRadius:"1rem"
-              }}
-            >
-              <Box
+        <Grid
+          container
+          sx={{
+            alignItems: "center",
+            my: 1,
+          }}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          {experiencias.map((experiencia, index) => (
+            <Fragment key={index}>
+              <Card
+                elevation={3}
                 sx={{
-                  // border: 1,
-                  pb: 1,
-                }}
-              >
-                <Typography
-                  variant={"h5"}
-                  align="center"
-                  sx={{
-                    fontFamily: "Noto Sans",
-                    // fontFamily: "Salsa",
-                    fontWeight: "bold",
-                    display: "flex",
-                    justifyContent: "center",
-                    color: "#505050",
-                    mb:".25rem"
-                  }}
-                >
-                  {experiencia.titulo}
-                </Typography>
-                <Grid
-                  container
-                  sx={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                    // border:1
-                  }}
-                >
-                  <Grid item>
-                    <Tooltip arrow title="Tipo de Certificado">
-                      <div>
-                        <MyComponent icon={experiencia.clase}></MyComponent>
-                      </div>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        color: "#505050",
-                        fontFamily: "Noto Sans",
-                        display: "flex",
-                        justifyContent: "center",
-                        mx: 0.6,
-                      }}
-                    >
-                      {experiencia.clase}
-                    </Typography>
-                  </Grid>
-                </Grid>
-                {/* aqui debe poner un grid ... */}
-                <Grid
-                  container
-                  sx={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Grid item>
-                    <Tooltip arrow title="Año de Certificación">
-                      <div>
-                        <MyComponent icon="task"></MyComponent>
-                      </div>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        color: "#505050",
-                        fontFamily: "Noto Sans",
-                        display: "flex",
-                        justifyContent: "center",
-                        mx: 0.6,
-                      }}
-                    >
-                      {experiencia.periodo}
-                    </Typography>
-                  </Grid>
-                </Grid>
-                <Grid
-                  container
-                  sx={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Grid item>
-                    <Tooltip arrow title="Nombre de Institución">
-                      <div>
-                        <MyComponent icon="business"></MyComponent>
-                      </div>
-                    </Tooltip>
-                  </Grid>
-                  <Grid item>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        color: "#505050",
-                        fontFamily: "Noto Sans",
-                        display: "flex",
-                        justifyContent: "center",
-                        mx: 0.6,
-                      }}
-                    >
-                      {experiencia.casa}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Box>
-              <Divider
-                sx={
-                  {
-                    // border: 1,
-                  }
-                }
-              ></Divider>
-              <Box
-                sx={{
+                  my: 2,
+                  mx: 2,
+                  width: "90%",
                   // border:1,
-                  py: ".5rem",
-                  mx: "1rem",
+                  p: "1.25rem",
+                  borderRadius: "1rem",
                 }}
               >
-                <Typography
-                  variant="body2"
+                <Box
                   sx={{
-                    fontFamily: "Noto Sans",
+                    // border: 1,
+                    pb: 1,
                   }}
                 >
-                  {experiencia.descripcion}
-                </Typography>
-              </Box>
+                  <Typography
+                    variant={"h5"}
+                    align="center"
+                    sx={{
+                      fontFamily: "Noto Sans",
+                      // fontFamily: "Salsa",
+                      fontWeight: "bold",
+                      display: "flex",
+                      justifyContent: "center",
+                      color: "#505050",
+                      mb: ".25rem",
+                    }}
+                  >
+                    {experiencia.titulo}
+                  </Typography>
+                  <Grid
+                    container
+                    sx={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                      // border:1
+                    }}
+                  >
+                    <Grid item>
+                      <Tooltip arrow title="Tipo de Certificado">
+                        <div>
+                          <MyComponent icon={experiencia.clase}></MyComponent>
+                        </div>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          color: "#505050",
+                          fontFamily: "Noto Sans",
+                          display: "flex",
+                          justifyContent: "center",
+                          mx: 0.6,
+                        }}
+                      >
+                        {experiencia.clase}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  {/* aqui debe poner un grid ... */}
+                  <Grid
+                    container
+                    sx={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Grid item>
+                      <Tooltip arrow title="Año de Certificación">
+                        <div>
+                          <MyComponent icon="task"></MyComponent>
+                        </div>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          color: "#505050",
+                          fontFamily: "Noto Sans",
+                          display: "flex",
+                          justifyContent: "center",
+                          mx: 0.6,
+                        }}
+                      >
+                        {experiencia.periodo}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Grid
+                    container
+                    sx={{
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Grid item>
+                      <Tooltip arrow title="Nombre de Institución">
+                        <div>
+                          <MyComponent icon="business"></MyComponent>
+                        </div>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item>
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          color: "#505050",
+                          fontFamily: "Noto Sans",
+                          display: "flex",
+                          justifyContent: "center",
+                          mx: 0.6,
+                        }}
+                      >
+                        {experiencia.casa}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Box>
+                <Divider
+                  sx={
+                    {
+                      // border: 1,
+                    }
+                  }
+                ></Divider>
+                <Box
+                  sx={{
+                    // border:1,
+                    py: ".5rem",
+                    mx: "1rem",
+                  }}
+                >
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontFamily: "Noto Sans",
+                    }}
+                  >
+                    {experiencia.descripcion}
+                  </Typography>
+                </Box>
 
-              {/* <Box
+                {/* <Box
               sx={{
                 // border:1,
                 py: 1,
@@ -264,11 +265,11 @@ const Wrapper_01 = () => {
                     </Chip>
                     ))}
                   </Grid> */}
-            </Card>
-          </Fragment>
-        ))}
-      </Grid>
-    </Container>
+              </Card>
+            </Fragment>
+          ))}
+        </Grid>
+      </Container>
     </ThemeProvider>
   );
 };
