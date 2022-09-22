@@ -65,7 +65,7 @@ const Wrapper_01 = () => {
             justifyContent: "center",
             // top:"10px",
             // my: 5,
-            // pl: 5,
+            py: 5,
           }}
           xs={12}
           md={6}
@@ -86,10 +86,10 @@ const Wrapper_01 = () => {
             >
               <Avatar
                 sx={{
-                  width: 240,
-                  height: 240,
+                  width: "18rem",
+                  height: "18rem",
                   border: 3,
-                  mt: "2rem"
+                  // mt: "2rem"
                 }}
                 src={foto}
               ></Avatar>
