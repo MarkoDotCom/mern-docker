@@ -100,6 +100,8 @@ const Wrapper_01 = () => {
     <Container 
       sx={{
         position: "relative",
+        // border:3,
+        pl:"4.4rem"
 
       }}
     >
@@ -118,7 +120,7 @@ const Wrapper_01 = () => {
             <Card
               elevation={3}
               sx={{
-                my: 1,
+                my: 2,
                 mx: 2,
                 width: "90%",
                 // border:1,
@@ -134,6 +136,7 @@ const Wrapper_01 = () => {
               >
                 <Typography
                   variant={"h5"}
+                  align="center"
                   sx={{
                     fontFamily: "Bowlby One SC",
                     fontWeight: "bold",
@@ -226,7 +229,7 @@ const Wrapper_01 = () => {
                   </Grid>
                 </Grid>
               </Box>
-              <Divider />
+              {/* <Divider /> */}
               <Box
                 sx={{
                   // border:1,
@@ -246,6 +249,7 @@ const Wrapper_01 = () => {
                   </Fragment>
                 ))}
               </Box>
+              <Divider  sx={{mb:1}}/>
               <Grid
                 // direction="row"
                 sx={{

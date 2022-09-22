@@ -54,12 +54,12 @@ const App = () => {
             <Parrafo01 />
           </Route>
           <Route path="/experiencias-laborales">
-            {/* <Banner01
+            <Banner01
               titulo="Experiencias Laborales"
               icon="homework"
               height="120"
               fontVariant="h2"
-            /> */}
+            />
             <GridExperiencias01 />
           </Route>
           <Route path="/experiencias-academicas">

@@ -28,12 +28,16 @@ const Wrapper_01 = () => {
     },
   ]);
   return (
-    <Container>
+    <Container sx={{
+      position: "relative",
+      // border:3,
+      pl:"4.4rem"
+
+    }}>
       <Grid
         container
         sx={{
-        position: "relative",
-        alignItems: "center",
+          alignItems: "center",
           my: 1,
         }}
         direction="row"
@@ -44,7 +48,8 @@ const Wrapper_01 = () => {
           <Fragment key={index}>
             <Grid
               item
-              xs={6}
+              xs={12}
+              md={6}
               sx={{
                 // border:1,
                 alignItems: "center",
@@ -56,7 +61,7 @@ const Wrapper_01 = () => {
               <Card
                 elevation={3}
                 sx={{
-                  my: 1,
+                  my: 2,
                   mx: 2,
                   width: "90%",
                   // border:1,

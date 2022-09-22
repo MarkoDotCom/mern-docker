@@ -20,14 +20,19 @@ const Wrapper_01 = () => {
         // py: 1,
         position: "relative",
         // display: "inline-block",
-        height: "90vh",
-        justifyContent: "center",
-        alignItems: "center",
+        // height: "90vh",
+        // justifyContent: "center",
+        // alignItems: "center",
         // height: "10vh",
         // paddingBottom: "50%",
         // width: "50%",
         // pt:"12rem",
-        // border:1,
+        color:"white",
+        // border:3,
+        // left:"4rem",
+        // right:0,
+        pl:"4.6rem"
+        // width: "100vh"
       }}
     >
       <Grid
@@ -36,7 +41,7 @@ const Wrapper_01 = () => {
         justifyContent="center"
         // alignItems="stretch"
         sx={{
-          display: "flex",
+          // display: "flex",
 
           height: "90vh",
           // mt:"50,
@@ -55,17 +60,17 @@ const Wrapper_01 = () => {
           item
           sx={{
             display: "flex",
-            // border:  3,
+            // border:  1,
             color: "#FFFFFF",
             justifyContent: "center",
             // top:"10px",
             // my: 5,
             // pl: 5,
           }}
-          xs={6}
-          // md={12}
+          xs={12}
+          md={6}
         >
-          <Box sx={{ boder: 1 }}>
+          <Box sx={{  }}>
             <Tooltip
               arrow
               title={
@@ -84,6 +89,7 @@ const Wrapper_01 = () => {
                   width: 240,
                   height: 240,
                   border: 3,
+                  mt: "2rem"
                 }}
                 src={foto}
               ></Avatar>
@@ -93,8 +99,8 @@ const Wrapper_01 = () => {
         <Grid
           item
           sx={{
-            p: "3rem",
-            // border: 10,
+            // p: "3rem",
+            // border: 3,
             // boxSizing: "border-box"
             // pb: "100vh"
             // position: 'relative',
