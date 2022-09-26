@@ -27,8 +27,11 @@ const Typography_01 = () => {
 
   const [parrafo] = useState(
     // <Typography variant="h6">Soy un <strong>Ingeniero Analista Computacional</strong> asociado a la Institución Académica DuocUC. <br/>Me especializo en desarrollo <strong>Full-Stack</strong> usando <strong>ReactJS</strong> y <strong>Node.js</strong>.<br/> Ofrezco <strong>proyectos atractivos</strong> con un <strong>diseño minimalista</strong>, al mismo tiempo que me preocupo por mantener una <strong>experiencia de usuario</strong> de calidad.</Typography>
-    <Typography variant="body1">
-      Soy <b>Ingeniero Analista Computacional</b> asociado a la Institución
+    <Typography sx={{ typography: {
+      xs: "body1",
+      md: "h5"
+    }}}>
+      Soy un <b>Ingeniero Analista Computacional</b> asociado a la Institución
       Académica DuocUC. <br />
       Me especializo en desarrollo <b>Full-Stack</b> usando <b>ReactJS</b> y{" "}
       <b>Node.js</b>.<br /> Ofrezco <b>proyectos atractivos</b> con un{" "}
@@ -45,7 +48,7 @@ const Typography_01 = () => {
 
     <Typography
       // variant="h1"
-      align="justify"
+      // align="justify"
       sx={{
         // ml:"3rem",
         fontFamily: "Noto Sans",
@@ -82,6 +85,7 @@ const Typography_01 = () => {
         // justifyContent: "left",
         // pl: "10%",
         // ml:"20%"
+        
       }}
     >
       {parrafo}

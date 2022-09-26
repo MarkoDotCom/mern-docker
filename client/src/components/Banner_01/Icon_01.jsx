@@ -15,7 +15,7 @@ const styles = {
     md: "4rem",
   },
   // border:1,
-  mr: "1.5rem"
+  mx: ".5rem"
 };
 
 const Icon_01 = ({ icon }) => {

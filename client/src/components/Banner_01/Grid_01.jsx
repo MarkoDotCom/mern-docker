@@ -14,55 +14,25 @@ const Grid_01 = ({ titulo, icon, height, fontVariant }) => {
   return (
     <Box
       sx={{
-        // my:1,
-        // boxSizing: "border-box",
         display: "flex",
         position: "relative",
         pl: "65px",
-        // pb: "20px",
-        // pr: "10px",
-
-        // pl: "65px",
-        // left: "0.1rem",
         background:
           "linear-gradient(315deg, rgba(137,58,180,1) 0%, rgba(253,29,84,1) 50%, rgba(252,199,69,1) 100%)",
       }}
     >
       <Grid
         container
-        // spacing={2}
         sx={{
-          // border: 1,
-          // display: "flex",
-          // flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
-          // my: 1,
           height: parseInt(height),
-          // p: 1,
         }}
       >
-        {/* {typeof height} */}
-        <Grid
-          item
-          //   xs={6}
-          sx={
-            {
-              // border: 1,
-              //   border: "1px solid",
-            }
-          }
-        >
+        <Grid item>
           <Icon icon={icon} />
         </Grid>
-        <Grid
-          item
-          sx={
-            {
-              //   border: "1px solid",
-            }
-          }
-        >
+        <Grid item>
           <Typography titulo={titulo} fontVariant={fontVariant}></Typography>
         </Grid>
       </Grid>

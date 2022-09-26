@@ -51,11 +51,13 @@ const CompetenciasTecnologicas = () => {
       <Container
       sx={{
         pb: 0.5,
-        border: 1,
+        // border: 1,
         pl: "4.5rem",
+        pt: "1rem"
+
       }}
       >
-        <Card elevation={3}>
+        {/* <Card elevation={3}   > */}
         <Grid
           container
           sx={{
@@ -85,9 +87,10 @@ const CompetenciasTecnologicas = () => {
                 sx={{
                   color: "#fadddd",
                   // flexWrap: "wrap",
-                  // border: 1,
+                  border: 1,
                   borderRadius: "2rem",
                   py: "2rem",
+                  // m:"4rem",
                   fontSize: "1rem",
                   justifyContent: "center",
                   // height: "2.5rem",
@@ -121,7 +124,7 @@ const CompetenciasTecnologicas = () => {
             </Grid>
           ))}
         </Grid>
-      </Card>
+      {/* </Card> */}
       </Container>
     );
   }
@@ -136,7 +139,7 @@ const CompetenciasTecnologicas = () => {
       navButtonsAlwaysInvisible={true}
       cycleNavigation={true}
       // fullHeightHover={true}
-      swipe={true}
+      swipe={false}
       sx={
         {
           // display: "flex",
