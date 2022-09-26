@@ -12,22 +12,20 @@ import { StyledEngineProvider } from "@mui/material/styles";
 import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
 const theme = createTheme();
 
-Sentry.init({
-  dsn: "https://21f1a0dc38834e98a786fd70e266fb02@o393521.ingest.sentry.io/6709636",
-  integrations: [new BrowserTracing()],
-  tracesSampleRate: 1.0,
-});
+// Sentry.init({
+//   dsn: "https://21f1a0dc38834e98a786fd70e266fb02@o393521.ingest.sentry.io/6709636",
+//   integrations: [new BrowserTracing()],
+//   tracesSampleRate: 1.0,
+// });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
       <ScopedCssBaseline>
         <ThemeProvider theme={theme}>
-        {/* <CssVarsProvider> */}
-        <Router>
-          <App></App>
-        </Router>
-        {/* </CssVarsProvider> */}
+          <Router>
+            <App></App>
+          </Router>
         </ThemeProvider>
       </ScopedCssBaseline>
     </StyledEngineProvider>

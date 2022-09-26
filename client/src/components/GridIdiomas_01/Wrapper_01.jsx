@@ -91,14 +91,15 @@ const Wrapper_01 = () => {
                 >
                   <Typography
                     variant={"h5"}
+                    align="center"
                     sx={{
-                      fontFamily: "Bowlby One SC",
+                      fontFamily: "Noto Sans",
+                      // fontFamily: "Salsa",
                       fontWeight: "bold",
                       display: "flex",
                       justifyContent: "center",
                       color: "#505050",
-                      // border: 1,
-                      // alignContent: "center",
+                      mb:".25rem"
                     }}
                   >
                     {idioma.idioma}
@@ -110,6 +111,9 @@ const Wrapper_01 = () => {
                     sx={{
                       justifyContent: "center",
                       alignItems: "center",
+                      // border:1,
+                      // x:"2rem",
+                      display: "flex",
                     }}
                   >
                     <Grid item>

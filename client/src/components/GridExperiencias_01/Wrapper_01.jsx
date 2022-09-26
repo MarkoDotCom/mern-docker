@@ -154,7 +154,7 @@ const Wrapper_01 = () => {
                       display: "flex",
                       justifyContent: "center",
                       color: "#505050",
-                      mb:".25rem"
+                      mb: ".25rem",
                     }}
                   >
                     {experiencia.role}
@@ -162,51 +162,45 @@ const Wrapper_01 = () => {
                   <Grid
                     container
                     sx={{
-                      // border:1,
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    <Grid item>
-                      <Typography
-                        variant="subtitle1"
-                        sx={{
-                          color: "#505050",
-                          fontFamily: "Noto Sans",
-                          display: "flex",
-                          justifyContent: "center",
-                          mx: 0.6,
-                        }}
-                      >
-                        {experiencia.periodoInicio}
-                      </Typography>
-                    </Grid>
                     <Tooltip title="Período de Contribución" arrow>
-                      <div>
+                      <Box sx={{ flexDirection: "row", display: "flex" }}>
+                        <Grid item>
+                          <Typography
+                            variant="subtitle1"
+                            sx={{
+                              color: "#505050",
+                              fontFamily: "Noto Sans",
+                              display: "flex",
+                              justifyContent: "center",
+                              mx: 0.6,
+                            }}
+                          >
+                            {experiencia.periodoInicio}
+                          </Typography>
+                        </Grid>
                         <Grid item>
                           <MyComponent icon="time"></MyComponent>
                         </Grid>
-                      </div>
+                        <Grid item>
+                          <Typography
+                            variant="subtitle1"
+                            sx={{
+                              color: "#505050",
+                              fontFamily: "Noto Sans",
+                              display: "flex",
+                              justifyContent: "center",
+                              mx: 0.6,
+                            }}
+                          >
+                            {experiencia.periodoFin}
+                          </Typography>
+                        </Grid>
+                      </Box>
                     </Tooltip>
-                    {/* <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack> */}
-                    <Grid item>
-                      <Typography 
-                        variant="subtitle1"
-                        sx={{
-                          color: "#505050",
-                          fontFamily: "Noto Sans",
-                          display: "flex",
-                          justifyContent: "center",
-                          mx: 0.6,
-                        }}
-                      >
-                        {experiencia.periodoFin}
-                      </Typography>
-                    </Grid>
                   </Grid>
                   {/* aqui debe poner un grid ... */}
                   <Grid
@@ -216,28 +210,28 @@ const Wrapper_01 = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Grid item>
-                      <Tooltip arrow title="Nombre de Compañía">
-                        <div>
+                    <Tooltip arrow title="Nombre de Compañía">
+                      <Box sx={{ flexDirection: "row", display: "flex" }}>
+                        <Grid item>
                           <MyComponent icon="business"></MyComponent>
-                        </div>
-                      </Tooltip>
-                    </Grid>
-                    <Grid item>
-                      <Typography
-                        variant="subtitle1"
-                        sx={{
-                          ml: 0.25,
-                          // border:1,
-                          color: "#505050",
-                          fontFamily: "Noto Sans",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        {experiencia.company}
-                      </Typography>
-                    </Grid>
+                        </Grid>
+                        <Grid item>
+                          <Typography
+                            variant="subtitle1"
+                            sx={{
+                              ml: 0.25,
+                              // border:1,
+                              color: "#505050",
+                              fontFamily: "Noto Sans",
+                              display: "flex",
+                              justifyContent: "center",
+                            }}
+                          >
+                            {experiencia.company}
+                          </Typography>
+                        </Grid>
+                      </Box>
+                    </Tooltip>
                   </Grid>
                 </Box>
                 {/* <Divider /> */}

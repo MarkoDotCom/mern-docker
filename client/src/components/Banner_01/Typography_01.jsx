@@ -8,7 +8,7 @@ import {
 
 let theme = createTheme({
   typography: {
-    fontFamily: "Salsa",
+    fontFamily: "Noto Sans",
   },
 });
 theme = responsiveFontSizes(theme);
@@ -25,13 +25,12 @@ const Typography_01 = ({ titulo, fontVariant }) => {
           alignContent: "center",
           justifyContent: "center",
           // fontFamily: "Salsa",
-          // border: 1,
           letterSpacing: 2,
           // fontSize: 42,
           color: "#ffffff",
           // my:2,
           typography: {
-            fontFamily: "Salsa",
+            // fontFamily: "Salsa",
             xs: "h5",
             md: "h2",
             //   useNextVariants: true
