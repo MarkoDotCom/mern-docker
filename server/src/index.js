@@ -1,6 +1,6 @@
 // server.js
-import bodyParser from 'body-parser';
-import express from 'express';
+import bodyParser from "body-parser";
+import express from "express";
 // import './config/mongodb.config';
 // import postRouter from './routes/post.router';
 
@@ -12,28 +12,31 @@ const PORT = 8080;
 
 // Routes
 //const postRouter = require('./routes/post.router.js');
+import indexRoutes from "./routes/index";
+import webpayPlusRoutes from "./routes/webpay_plus";
 
 app.use(
   bodyParser.urlencoded({
-    extended: true
+    extended: true,
   })
 );
 app.use(bodyParser.json());
 
-
 // Server API's
 // app.use('/api/posts', postRouter);
 
-app.get('/', (req, res) => {
-  res.status(200).send('API Gateway in development');
-})
+// app.get('/', (req, res) => {
+//   res.status(200).send('API Gateway in development');
+// })
 
-app.get('/abc', function(req, res){
-  res.send('Hello world again');
-})
+app.use("/", indexRoutes);
+app.use("/webpay_plus", webpayPlusRoutes);
+app.get("/abc", function (req, res) {
+  res.send("Hello abc!");
+});
 
 app.listen(PORT, function () {
-    console.log(`Server Listening on ${PORT}`);
+  console.log(`Server Listening on ${PORT}`);
 });
 
 export default app;
